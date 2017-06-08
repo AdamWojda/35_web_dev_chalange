@@ -1,0 +1,34 @@
+// main: /xampp/htdocs/multiszablon2/scss/style.scss
+
+html {
+	-webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+
+}
+
+strong {
+
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $color-black inset;
+	-webkit-text-fill-color: $color-white !important;
+}
+
+img {
+	max-width: 100%;
+    display: block;
+}
+
+* {
+    @include border-box;
+}

@@ -1,0 +1,541 @@
+// RWD mixin
+$xs: ( max:  767px );
+$sm: ( max:  500px );
+$md: ( max:  650px );
+$lgx: ( max: 1200px );
+$small: ( max:  400px );
+$medium: ( max: 1000px );
+$mega: ( max: 1470px );
+
+@mixin breakpoint($map) {
+  $query: "";
+  @if map-has-key($map, min) { $query: append($query, "(min-width: #{map-get($map, min)})") }
+  @if map-has-key($map, min) and map-has-key($map, max) { $query: append($query, "and") }
+  @if map-has-key($map, max) { $query: append($query, "(max-width: #{map-get($map, max)})") }
+  @media screen and #{$query} { @content; }
+}
+
+//
+// Mixin to clear floated elements
+//
+//
+// @mixin
+// @section Positioning
+// @example
+//  @include clearfix();
+//
+@mixin clearfix() {
+    &:before, &:after { display: table; content: ''; }
+    &:after { clear: both; }
+    & { zoom: 1; }
+}
+
+// Rem font-size
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+  $px : ();
+  $rem: ();
+
+  @each $value in $values {
+
+    @if $value == 0 or $value == auto {
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+
+    @else {
+      $unit: unit($value);
+      $val: parseInt($value);
+
+      @if $unit == "px" {
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / 10 + rem));
+      }
+
+      @if $unit == "rem" {
+        $px : append($px,  ($val * 10 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem {
+    #{$property}: $px;
+  } @else {
+    #{$property}: $px;
+    #{$property}: $rem;
+  }
+}
+
+//
+// Mixin for best inline-block support
+//
+//
+// @mixin
+// @section Positioning
+// @example
+//  @include inline-block();
+//
+@mixin inline-block() {
+	display: -moz-inline-stack;	// ff 2
+	display: inline-block;
+	zoom:1;
+
+    *display: inline;
+}
+
+//
+// Mixin for best support placheolder styling
+//
+//
+// @mixin
+// @section Elements
+// @example
+//  @include placeholder(
+//    // css
+//  );
+//
+@mixin placeholder() {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-ms-input-placeholder {
+        @content;
+    }
+}
+
+//
+// Mixin to fill parent relative container with 100% absolute layer over everything, for
+// links or buttons
+//
+// @mixin
+// @section Positioning
+// @param $x
+//  [2 options], right, left(default)
+// @param $y
+//  [2 options], top(default), bottom
+// @param $z-index
+//  [option or value], auto(default) or 100
+// @example
+//  // Default, left, top
+//  @include fill-with-absolute();
+//
+//  // Top
+//  @include fill-with-absolute(left, top);
+//  @include fill-with-absolute(right, top);
+//
+//  // Bottom
+//  @include fill-with-absolute(left, bottom);
+//  @include fill-with-absolute(right, bottom);
+//
+@mixin fill-with-absolute($x: 'left', $y: 'top', $z-index: 'auto') {
+    position: absolute;
+    z-index: $z-index;
+
+    width: 100%;
+    height: 100%;
+
+    @if $x == 'right' {
+        right: 0;
+    }
+    @if $x == 'left' {
+         left: 0;
+    }
+
+    @if $y == 'bottom' {
+        bottom: 0;
+    }
+    @if $y == 'top' {
+        top: 0;
+    }
+
+}
+
+//
+// Mixin for absolute or relative positioning with css3 transform. Support  IE9> | OMini/none
+//
+// @mixin
+// @section Positioning
+// @param $type
+//  [3 options], horzontal, vertical(default), both
+// @param $position
+//  [2 options] absolute(default) or relative
+// @example
+//  // Default, vertical, absolute
+//  @include centering();
+//
+// // Absolute
+//  @include centering(horizontal, absolute);
+//  @include centering(vertical, absolute);
+//  @include centering(both, absolute);
+//
+//  // Relative
+//  @include centering(horizontal, relative);
+//  @include centering(vertical, relative);
+//  @include centering(both, relative);
+//
+@mixin centering($type: 'vertical', $position: 'absolute') {
+    @if $position == 'absolute' {
+        position: absolute;
+    }
+    @if $position == 'relative' {
+        position: relative;
+    }
+    @if $type == 'vertical' {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @if $type == 'horizontal' {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @if $type == 'both' {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+//
+// Mixin creates arrow. $position true or false is optional : (move to overhanging centered edge, message box style)
+//
+// @mixin
+// @section Elements
+// @param $direction
+//  [8 options], top, left, right, bottom, top-left, top-right, bottom-left, bottom-right
+// @param $color
+//  [3 options], hex, rgb, rbga
+// @param $size
+//  [value], px, em
+// @param $position
+//  [boolean], true, false(default)
+// @example
+//
+//  @include arrow(bottom, $color-blackFF, 15px);
+//  @include arrow(top, $color-blackFF, 10px);
+//  @include arrow(left, $color-black000, 25px);
+//  @include arrow(right, $color-black000, 45px);
+//
+@mixin arrow($direction, $color, $size, $position: false) {
+    display: block;
+
+    width: 0;
+    height: 0;
+
+    @if $position == true {
+        position: absolute;
+
+        content: "";
+
+        @if $direction == "top" {
+            bottom: 100%;
+            left: 50%;
+
+            margin-left: (-$size);
+        } @else if $direction == "bottom" {
+            top: 100%;
+            left: 50%;
+
+            margin-left: (-$size);
+        } @else if $direction == "left" {
+            top: 50%;
+            right: 100%;
+
+            margin-top: (-$size);
+        } @else if $direction == "right" {
+            top: 50%;
+            left: 100%;
+
+            margin-top: (-$size);
+        }
+    }
+    @if $direction == "top" {
+        border-top: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+    } @else if $direction == "right" {
+        border-top: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+    } @else if $direction == "bottom" {
+        border-top: $size solid $color;
+        border-right: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid transparent;
+    } @else if $direction == "left" {
+        border-top: $size solid transparent;
+        border-right: $size solid $color;
+        border-bottom: $size solid transparent;
+        border-left: $size solid transparent;
+    } @else if $direction == "top-left" {
+        border-top: $size solid $color;
+        border-right: $size solid transparent;
+    } @else if $direction == "top-right" {
+        border-top: $size solid $color;
+        border-left: $size solid transparent;
+    } @else if $direction == "bottom-left" {
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+    } @else if $direction == "bottom-right" {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+    }
+}
+
+
+//
+// Create skeleton for checkbox crosbrowser styling with background image, mixin
+// should be used on input and the label should be placed after the input for this to work properly.
+//
+// @mixin
+// @section Elements
+// @param $checkbox-width
+//  [value] for width and height
+// @param $checkbox-image
+//  [string] 'url/to/file'
+// @param $checkbox-margin
+//  [value] 0 0 20px 0
+// @param $label-padding
+//  [value] 0 10px 0 0
+// @example
+//
+//  @include checkbox(5px, 'url/to/file1', 0 0 20px 0, 0);
+//  @include checkbox(95px, 'url/to/file2', 1px 0 0 0, 10px);
+//  @include checkbox(15px, 'url/to/file3', 0 0 0 2px, 0 10px);
+//  @include checkbox(65px, 'url/to/file4', 0 10px 0 0, 10px 0);
+//
+
+@mixin checkbox($checkbox-width, $checkbox-image, $checkbox-margin, $label-padding) {
+    & {
+        position: absolute;
+        left: -9999px;
+
+        & + label {
+            position: relative;
+
+            display: block;
+
+            padding: $label-padding;
+
+            cursor: pointer;
+
+            // Checkbox setup
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+
+                display: block;
+
+                width: $checkbox-width;
+                height: $checkbox-width;
+                margin: $checkbox-margin;
+
+                content: "";
+
+                background-image: url($checkbox-image);
+                background-repeat: no-repeat;
+            }
+        }
+        // Disabled
+        &:disabled {
+            & + label {
+                cursor: not-allowed;
+
+                &:before {
+                    background-position: 0 -19px;
+                }
+            }
+            // Disabled checked
+            &:checked + label {
+                &:before {
+                    background-position: 0 -19px;
+                }
+            }
+        }
+        // Checked
+        &:checked + label {
+            &:before {
+                background-position: 0 -19px;
+            }
+        }
+    }
+}
+
+//
+// Include font from local server, with font-face
+//
+// @mixin
+// @section Utilities
+// @param $name
+//  [string] font-name for mixins
+// @param $path
+//  [string] 'url/to/file'
+// @param $weight
+//  [string] normal
+// @param $style
+//  [string] normal
+// @param $exts
+//  [font types] eot woff woff2 ttf svg
+// @example
+//  @include font-face('Klavika-Medium', '../fonts/Klavika-Medium', normal, normal);
+//  @include font-face('Klavika-Regular', '../fonts/Klavika-Regular', normal, normal);
+//  @include font-face('Klavika-Light', '../fonts/Klavika-Light', normal, normal);
+//
+@mixin font-face($name, $path, $weight: normal, $style: normal, $exts: eot woff woff2 ttf svg) {
+	$src: null;
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+	@font-face {
+		font-family: quote($name);
+		font-weight: $weight;
+		font-style: $style;
+
+		src: $src;
+	}
+}
+
+//
+// Quick keyframes
+//
+// @mixin
+// @section Utilities
+// @param $animation-name
+//  [string] animation name
+// @example
+//  @include keyframes(animation-name){
+//    // css
+//  };
+//
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+//
+//
+// Opacity with old IE
+//
+// @mixin
+// @section Utilities
+// @param $opacity
+//  [value] opacity level
+// @example
+//  @include opacity(0.5);
+//
+@mixin opacity($opacity) {
+    opacity: $opacity;
+
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie);
+}
+
+//
+//
+// Quick animation
+//
+// @mixin
+// @section Utilities
+// @param $str
+//  [string] behaves like animation property
+// @example
+//  @include animation('animation-name .5 forwards ...');
+//
+@mixin animation($str) {
+      -webkit-animation: #{$str};
+      -moz-animation: #{$str};
+      -ms-animation: #{$str};
+      -o-animation: #{$str};
+      animation: #{$str};
+}
+//
+//
+// Quick transitions
+//
+// @mixin
+// @section Utilities
+// @param $args
+//  [string] behaves like transition property
+// @example
+//  @include transition(top 5s linear);
+//
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+//
+//
+// Quick transforms
+//
+// @mixin
+// @section Utilities
+// @param $args
+//  [string] behaves like transform property
+// @example
+//  @include transform(translateY(-50%));
+//
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+//
+//
+// Border box
+//
+// @mixin
+// @section Utilities
+// @example
+//  @include border-box();
+//
+@mixin border-box() {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -ms-box-sizing: border-box;
+}
