@@ -8,8 +8,24 @@ var gulp         = require('gulp'),
     concat       = require('gulp-concat'),
     pngquant     = require('imagemin-pngquant'),
     rimraf       = require('gulp-rimraf'),
-    browserSync  = require('browser-sync');
+    browserSync  = require('browser-sync'),
+    svgSprite    = require('gulp-svg-sprite'),
     notify       = require('gulp-notify');
+
+const config = {
+      mode: {
+        symbol: { // symbol mode to build the SVG
+          render: {
+            css: false, // CSS output option for icon sizing
+            scss: false // SCSS output option for icon sizing
+          },
+          dest: './', // destination folder
+          prefix: '.svg--%s', // BEM-style prefix if styles rendered
+          sprite: 'all-sprite.svg', //generated sprite name
+          example: true // Build a sample page, please!
+        }
+      }
+};
 
 gulp.task('generate_styles', function(){
 
@@ -60,6 +76,12 @@ gulp.task('minify_images', function() {
         .pipe(gulp.dest('./img/'))
         .pipe(notify('Images Compressed'));
 
+});
+
+gulp.task('gen_svg_sprite', function() {
+    return gulp.src('img/svg/**/*.svg')
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('img/svg/'));
 });
 
 gulp.task('watch_build', function() {
