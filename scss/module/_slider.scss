@@ -1,0 +1,60 @@
+.slider {
+    &--home &__item {
+        position: relative;
+        &:before {
+            @include fill-with-absolute(top, left, map-get($depth, slider));
+
+            content: '';
+            opacity: .9;
+            background: #f38181; /* Old browsers */
+            background: -moz-linear-gradient(top, #f38181 0%, #fce38a 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #f38181 0%,#fce38a 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #f38181 0%,#fce38a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f38181', endColorstr='#fce38a',GradientType=0 ); /* IE6-9 */
+
+        }
+    }
+
+    &--home &__content {
+        @include centering();
+
+        left: 0;
+        right: 0;
+        color: #fff;
+        text-align: center;
+        z-index: map-get($depth, sliderText);
+
+        .typo--big {
+                margin-bottom: 43px;
+        }
+
+        .typo--enormous {
+                line-height: .9;
+        }
+    }
+
+    &__nav {
+        background: #f0d989;
+        font-size: 0;
+
+        &__element {
+            display: inline-block;
+            width: 25%;
+            font-size: 14px;
+        }
+
+        &__title,
+        &__id {
+            color: #fff;
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__id {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+}

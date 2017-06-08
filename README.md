@@ -8,4 +8,4 @@
 | IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions
 
 ### Description
-CSS is precompiled by SASS, in order to keep scss folder organized we use ITCSS, for css selectors we use BEM with a little of SMACSS - for selecting active modules. Form Boostrap we use only column grid.
+CSS is precompiled by SASS, in order to keep scss folder organized we use ITCSS, for css selectors we use BEM. For icons we use SVG compressed to sprite with shape method, more here https://css-tricks.com/svg-use-external-source/

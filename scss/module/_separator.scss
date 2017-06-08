@@ -1,0 +1,13 @@
+.separator {
+    text-align: center;
+    margin: 66px 0 49px;
+    height: 3px;
+
+    &__line {
+        display: inline-block;
+        width: 63px;
+        height: 3px;
+        background: #fff;
+        vertical-align: top;
+    }
+}

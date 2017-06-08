@@ -1,0 +1,54 @@
+.typo {
+
+    &--montserrat {
+        font-family: 'Montserrat';
+    }
+
+    &--kaushan {
+        font-family: 'Kaushan Script';
+    }
+
+    &--roboto {
+        font-family: 'Roboto';
+    }
+
+    &--bold {
+        font-weight: bold;
+    }
+
+    &--thin {
+        font-weight: 300;
+    }
+
+    &--italic {
+        font-style: italic;
+    }
+
+    &--enormous {
+        font-size: 150px;
+    }
+
+    &--big {
+        font-size: 72px;
+    }
+
+    &--medium {
+        font-size: 30px;
+    }
+
+    &--smaller {
+        font-size: 24px;
+    }
+
+    &--small {
+        font-size: 18px;
+    }
+
+    &--general {
+        font-size: 15px;
+    }
+
+    &--upper {
+        text-transform: uppercase;
+    }
+}

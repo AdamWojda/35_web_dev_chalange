@@ -6,7 +6,6 @@
 
 // Mixins, functions, tools
 @import 'tools/mixins',
-        'tools/fonts',
         'tools/family';
 
 // Generic like reset or normalize
@@ -16,17 +15,24 @@
 @import 'elements/base',
         'elements/text';
 // Layouts
-//@import 'layout/container';
+@import 'layout/container',
+        'layout/header';
 
-// Components 
+// Components
 //@import 'components/button';
 
 // Modules
-//@import 'module/navigation';
+@import 'module/navigation',
+        'module/logo',
+        'module/svg',
+        'module/slider',
+        'module/button',
+        'module/separator',
+        'module/typography';
 
 /* ==================================================================================================== */
 /* External CSS
 /* ==================================================================================================== */
 
 // Vendor
-//@import 'vendor/owl.carousel';
+@import 'vendor/owl.carousel';

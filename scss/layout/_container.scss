@@ -1,0 +1,13 @@
+.container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &--inner {
+        max-width: 1245px;
+    }
+
+    &--small {
+        width: 960px;
+    }
+}

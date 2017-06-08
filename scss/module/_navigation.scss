@@ -1,0 +1,41 @@
+.navigation {
+    $root: &;
+
+    display: flex;
+
+    &__list {
+        flex: 7.2 0 auto;
+        display: flex;
+        padding-top: 9px;
+    }
+
+    &__tools {
+        display: flex;
+        flex: 1 0 auto;
+        padding-top: 6px;
+    }
+
+    &__tools &__element {
+        flex: 1 0 auto;
+
+        &:last-child {
+            flex: 0 0 auto;
+        }
+    }
+
+    &__element {
+        flex: 1 0 auto;
+    }
+
+    &__link {
+        font-size: 14px;
+        font-family: 'Montserrat';
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .logo {
+        flex: 13 0 auto;
+    }
+}

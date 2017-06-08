@@ -1,0 +1,12 @@
+.logo {
+    $root: &;
+    
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 30px;
+
+    &__link {
+        text-decoration: none;
+        color: #fff;
+    }
+}

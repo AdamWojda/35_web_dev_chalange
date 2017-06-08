@@ -10,7 +10,8 @@ var gulp         = require('gulp'),
     rimraf       = require('gulp-rimraf'),
     browserSync  = require('browser-sync'),
     svgSprite    = require('gulp-svg-sprite'),
-    notify       = require('gulp-notify');
+    notify       = require('gulp-notify'),
+    order        = require('gulp-order');
 
 const config = {
       mode: {
@@ -55,6 +56,10 @@ gulp.task('clear_scripts', function() {
 gulp.task('compress_javascript', ['clear_scripts'], function() {
 
   gulp.src('js/*.js')
+    .pipe(order([
+          'js/*.js',
+          'js/z_scripts.js'
+      ]))
     .pipe(uglify())
     .pipe(concat('app.js'))
     .pipe(rename({
@@ -86,5 +91,5 @@ gulp.task('gen_svg_sprite', function() {
 
 gulp.task('watch_build', function() {
     gulp.watch('scss/**/*.scss', ['generate_styles']);
-    gulp.watch('js/**/*.js', ['compress_javascript']);
+    gulp.watch(['js/**/*.js', '!js/app.min.js'], ['compress_javascript']);
 });

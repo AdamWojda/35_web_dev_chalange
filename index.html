@@ -22,23 +22,73 @@
 
             <div class="container container--inner">
 
-                <h1 class="logo">
-
-                    <a class="logo__link" href="https://adamwojda.github.io/35_web_dev_chalange" >
-
-                        <img class="logo__image" src="img/logo.png" alt="MoGo" />
-
-                    </a>
-
-                </h1>
-
                 <nav id="main-navigation" class="navigation">
 
-                    <ul class="m-navigation">
+                    <h1 class="logo">
 
-                        <li class="m-navigation__element">
+                        <a class="logo__link" title="MoGo" href="https://adamwojda.github.io/35_web_dev_chalange" >MoGo</a>
 
-                            <a class="m-navigation__link" href="#section-home" target="_self" data-scroll-offset="0">Home</a>
+                    </h1>
+
+                    <ul class="navigation__list">
+
+                        <li class="navigation__element navigation__element--active">
+
+                            <a class="navigation__link" href="#home" target="_self" data-scroll-offset="56">About</a>
+
+                        </li>
+
+                        <li class="navigation__element">
+
+                            <a class="navigation__link" href="#section-service" target="_self" data-scroll-offset="56">Service</a>
+
+                        </li>
+
+                        <li class="navigation__element">
+
+                            <a class="navigation__link" href="#section-work" target="_self" data-scroll-offset="56">Work</a>
+
+                        </li>
+
+                        <li class="navigation__element">
+
+                            <a class="navigation__link" href="#section-blog" target="_self" data-scroll-offset="56">Blog</a>
+
+                        </li>
+
+                        <li class="navigation__element">
+
+                            <a class="navigation__link" href="#section-contact" target="_self" data-scroll-offset="56">Contact</a>
+
+                        </li>
+
+                    </ul>
+
+                    <ul class="navigation__tools">
+
+
+                        <li class="navigation__element">
+
+                            <a class="navigation__link" href="#" target="_self" data-scroll-offset="56">
+
+                                <svg class="svg svg--basket">
+                                	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#basket"></use>
+                                </svg>
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="navigation__element">
+
+                            <a class="navigation__link" href="#" target="_self" data-scroll-offset="56">
+
+                                <svg class="svg svg--search">
+                                	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#search"></use>
+                                </svg>
+
+                            </a>
 
                         </li>
 
@@ -62,6 +112,135 @@
         <!-- main -->
         <main class="main main--index">
 
+            <section id="home">
+
+                <div class="owl-carousel slider slider--home" data-slider="home">
+                    <div class="slider__item" data-name="Intro">
+
+                        <img src="img/slider-1.jpg" alt="Slider Name" />
+
+                        <div class="container container--small slider__content">
+
+                            <p class="typo typo--kaushan typo--big">Creative Template</p>
+                            <p class="typo typo--bold typo--montserrat typo--enormous typo--upper">Welcome to MoGo</p>
+
+                            <div class="separator">
+                                <span class="separator__line"></span>
+                            </div>
+
+                            <a href="#" class="typo typo--montserrat typo--bold button">Learn More</a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="slider__item" data-name="work">
+
+                        <img src="img/slider-1.jpg" alt="Slider Name" />
+
+                        <div class="container container--inner slider__content">
+
+                            <p class="typo typo--kaushan typo--big">Creative Template</p>
+                            <p class="typo typo--montserrat typo--enormous typo--upper typo--bold">Welcome <br> to MoGo</p>
+
+                            <div class="separator">
+                                <span class="separator__line"></span>
+                            </div>
+
+                            <a href="#" class="typo typo--montserrat typo--bold button">Learn More</a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="slider__item" data-name="about">
+
+                        <img src="img/slider-1.jpg" alt="Slider Name" />
+
+                        <div class="container container--inner slider__content">
+
+                            <p class="typo typo--kaushan typo--big">Creative Template</p>
+                            <p class="typo typo--montserrat typo--enormous typo--upper typo--bold">Welcome <br> to MoGo</p>
+
+                            <div class="separator">
+                                <span class="separator__line"></span>
+                            </div>
+
+                            <a href="#" class="typo typo--montserrat typo--bold button">Learn More</a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="slider__item" data-name="Contacts">
+
+                        <img src="img/slider-1.jpg" alt="Slider Name" />
+
+                        <div class="container container--inner slider__content">
+
+                            <p class="typo typo--kaushan typo--big">Creative Template</p>
+                            <p class="typo typo--montserrat typo--enormous typo--upper typo--bold">Welcome <br> to MoGo</p>
+
+                            <div class="separator">
+                                <span class="separator__line"></span>
+                            </div>
+
+                            <a href="#" class="typo typo--montserrat typo--bold button">Learn More</a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="slider slider__nav">
+
+                    <div class="container container--inner">
+
+                        <div class="slider__nav__element slider__nav--active" data-id="0">
+
+                            <div class="progress">
+                                <div class="progress__line"></div>
+                            </div>
+
+                            <p class="slider__nav__title typo typo--upper typo--montserrat"><strong class="slider__nav__id">01</strong> Intro</p>
+
+                        </div>
+
+                        <div class="slider__nav__element" data-id="1">
+
+                            <div class="progress">
+                                <div class="progress__line"></div>
+                            </div>
+
+                            <p class="slider__nav__title typo typo--upper typo--montserrat"><strong class="slider__nav__id">02</strong> Work</p>
+
+                        </div>
+
+                        <div class="slider__nav__element" data-id="2">
+
+                            <div class="progress">
+                                <div class="progress__line"></div>
+                            </div>
+
+                            <p class="slider__nav__title typo typo--upper typo--montserrat"><strong class="slider__nav__id">03</strong> About</p>
+
+                        </div>
+
+                        <div class="slider__nav__element" data-id="3">
+
+                            <div class="progress">
+                                <div class="progress__line"></div>
+                            </div>
+
+                            <p class="slider__nav__title typo typo--upper typo--montserrat"><strong class="slider__nav__id">04</strong> Contacts</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
 
         </main>
         <!-- /main -->
