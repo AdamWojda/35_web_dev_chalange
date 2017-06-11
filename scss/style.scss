@@ -13,22 +13,28 @@
 
 // Element selectors, without classes
 @import 'elements/base',
-        'elements/text';
+        'elements/text',
+        'elements/typography';
 // Layouts
 @import 'layout/container',
+        'layout/section',
         'layout/header';
 
 // Components
 //@import 'components/button';
 
 // Modules
-@import 'module/navigation',
+@import 'module/button',
+        'module/imageGrid',
         'module/logo',
-        'module/svg',
-        'module/slider',
-        'module/button',
+        'module/listWithIcon',
+        'module/navigation',
+        'module/numbers',
+        'module/progress',
         'module/separator',
-        'module/typography';
+        'module/showcase',
+        'module/svg',
+        'module/slider';
 
 /* ==================================================================================================== */
 /* External CSS

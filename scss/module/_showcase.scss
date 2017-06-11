@@ -1,0 +1,15 @@
+.showcase {
+    text-align: center;
+    margin-top: 50px;
+    margin-left: -55px;
+
+    &__tablet {
+            display: inline-block;
+    }
+
+    &__mobile {
+        position: absolute;
+right: 252px;
+bottom: -88px;
+    }
+}

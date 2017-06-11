@@ -10,4 +10,32 @@
         height: 18px;
         fill: #fff;
     }
+
+    &--alarm,
+    &--linegraph,
+    &--ok,
+    &--book2,
+    &--home,
+    &--image {
+        fill: #95e1d3;
+    }
+
+    &--linegraph,
+    &--book2,
+    &--image {
+        width: 32px;
+        height: 32px;
+    }
+
+    &--alarm,
+    &--home {
+        width: 32px;
+        height: 31px;
+    }
+
+    &--ok {
+        width: 32px;
+        height: 28px;
+    }
+
 }

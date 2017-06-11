@@ -1,269 +1,1326 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>MoGo</title>
-        <meta name="description" content="Weekly Web Dev Challange - Theme 24" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta property="og:image" content="img/open-graph.jpg" />
+<head>
+    <title>MoGo</title>
+    <meta name="description" content="Weekly Web Dev Challange - Theme 24" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta property="og:image" content="img/open-graph.jpg" />
 
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="css/style.min.css" />
-        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto:300i,400" rel="stylesheet">
-        <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-        <!-- /CSS -->
-    </head>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,500,700|Roboto:300i,400" rel="stylesheet">
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- /CSS -->
+</head>
 
-    <body>
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<body>
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-        <!-- main-header -->
-        <header id="main-header" class="header" data-scroll-to-anchor>
+    <!-- main-header -->
+    <header id="main-header" class="header" data-scroll-to-anchor>
+
+        <div class="container container--inner">
+
+            <nav id="main-navigation" class="navigation">
+
+                <h1 class="logo">
+
+                    <a class="logo__link" title="MoGo" href="https://adamwojda.github.io/35_web_dev_chalange" >MoGo</a>
+
+                </h1>
+
+                <ul class="navigation__list">
+
+                    <li class="navigation__element navigation__element--active">
+
+                        <a class="navigation__link" href="#home" target="_self" data-scroll-offset="56">About</a>
+
+                    </li>
+
+                    <li class="navigation__element">
+
+                        <a class="navigation__link" href="#section-service" target="_self" data-scroll-offset="56">Service</a>
+
+                    </li>
+
+                    <li class="navigation__element">
+
+                        <a class="navigation__link" href="#section-work" target="_self" data-scroll-offset="56">Work</a>
+
+                    </li>
+
+                    <li class="navigation__element">
+
+                        <a class="navigation__link" href="#section-blog" target="_self" data-scroll-offset="56">Blog</a>
+
+                    </li>
+
+                    <li class="navigation__element">
+
+                        <a class="navigation__link" href="#section-contact" target="_self" data-scroll-offset="56">Contact</a>
+
+                    </li>
+
+                </ul>
+
+                <ul class="navigation__tools">
+
+
+                    <li class="navigation__element">
+
+                        <a class="navigation__link" href="#" target="_self" data-scroll-offset="56">
+
+                            <svg class="svg svg--basket">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#basket"></use>
+                            </svg>
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="navigation__element">
+
+                        <a class="navigation__link" href="#" target="_self" data-scroll-offset="56">
+
+                            <svg class="svg svg--search">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#search"></use>
+                            </svg>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+                <div class="hamburger" id="hamburger-menu">
+
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+    <!-- /main-header -->
+
+    <!-- main -->
+    <main class="main main--index">
+
+        <!-- home -->
+        <section id="home" class="section">
+
+            <div class="owl-carousel slider slider--home" data-slider="home">
+
+                <div class="slider__item">
+
+                    <img src="img/slider-1.jpg" alt="Slider Name" />
+
+                    <div class="container container--small slider__content">
+
+                        <p class="typo typo--kaushan typo--big">Creative Template</p>
+                        <p class="typo typo--bold typo--montserrat typo--enormous typo--upper">Welcome to MoGo</p>
+
+                        <div class="separator">
+                            <span class="separator__line"></span>
+                        </div>
+
+                        <a href="#" class="typo typo--montserrat typo--bold button">Learn More</a>
+
+                    </div>
+
+                </div>
+
+                <div class="slider__item">
+
+                    <img src="img/slider-1.jpg" alt="Slider Name" />
+
+                    <div class="container container--inner slider__content">
+
+                        <p class="typo typo--kaushan typo--big">Creative Template</p>
+                        <p class="typo typo--montserrat typo--enormous typo--upper typo--bold">Welcome <br> to MoGo</p>
+
+                        <div class="separator">
+                            <span class="separator__line"></span>
+                        </div>
+
+                        <a href="#" class="typo typo--montserrat typo--bold button">Learn More</a>
+
+                    </div>
+
+                </div>
+
+                <div class="slider__item">
+
+                    <img src="img/slider-1.jpg" alt="Slider Name" />
+
+                    <div class="container container--inner slider__content">
+
+                        <p class="typo typo--kaushan typo--big">Creative Template</p>
+                        <p class="typo typo--montserrat typo--enormous typo--upper typo--bold">Welcome <br> to MoGo</p>
+
+                        <div class="separator">
+                            <span class="separator__line"></span>
+                        </div>
+
+                        <a href="#" class="typo typo--montserrat typo--bold button">Learn More</a>
+
+                    </div>
+
+                </div>
+
+                <div class="slider__item">
+
+                    <img src="img/slider-1.jpg" alt="Slider Name" />
+
+                    <div class="container container--inner slider__content">
+
+                        <p class="typo typo--kaushan typo--big">Creative Template</p>
+                        <p class="typo typo--montserrat typo--enormous typo--upper typo--bold">Welcome <br> to MoGo</p>
+
+                        <div class="separator">
+                            <span class="separator__line"></span>
+                        </div>
+
+                        <a href="#" class="typo typo--montserrat typo--bold button">Learn More</a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="slider slider__nav">
+
+                <div class="container container--inner">
+
+                    <div class="slider__nav__element slider__nav--active" data-current-id="0">
+
+                        <div class="progress">
+                            <div class="progress__line"></div>
+                        </div>
+
+                        <p class="slider__nav__title typo typo--upper typo--montserrat"><strong class="slider__nav__id">01</strong> Intro</p>
+
+                    </div>
+
+                    <div class="slider__nav__element" data-current-id="1">
+
+                        <div class="progress">
+                            <div class="progress__line"></div>
+                        </div>
+
+                        <p class="slider__nav__title typo typo--upper typo--montserrat"><strong class="slider__nav__id">02</strong> Work</p>
+
+                    </div>
+
+                    <div class="slider__nav__element" data-current-id="2">
+
+                        <div class="progress">
+                            <div class="progress__line"></div>
+                        </div>
+
+                        <p class="slider__nav__title typo typo--upper typo--montserrat"><strong class="slider__nav__id">03</strong> About</p>
+
+                    </div>
+
+                    <div class="slider__nav__element" data-current-id="3">
+
+                        <div class="progress">
+                            <div class="progress__line"></div>
+                        </div>
+
+                        <p class="slider__nav__title typo typo--upper typo--montserrat"><strong class="slider__nav__id">04</strong> Contacts</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /home -->
+
+        <!-- about-us -->
+        <section id="aboutUs" class="section">
 
             <div class="container container--inner">
 
-                <nav id="main-navigation" class="navigation">
+                <div class="section__heading">
 
-                    <h1 class="logo">
+                    <h2 class="section__heading--top typo typo--kaushan typo--smaller">What we do</h2>
+                    <h3 class="section__heading--bottom typo typo--montserrat typo--medium typo--bold typo--upper">Story about us</h3>
 
-                        <a class="logo__link" title="MoGo" href="https://adamwojda.github.io/35_web_dev_chalange" >MoGo</a>
+                </div>
 
-                    </h1>
+                <div class="section__content content typo typo--roboto typo--general">
 
-                    <ul class="navigation__list">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
-                        <li class="navigation__element navigation__element--active">
+                </div>
 
-                            <a class="navigation__link" href="#home" target="_self" data-scroll-offset="56">About</a>
+                <div class="imageGrid imageGrid--bg imageGrid--text">
+
+                    <ul class="imageGrid__list" data-cols="3">
+
+                        <li class="imageGrid__element">
+                            <img class="imageGrid__image" src="img/about-us-1.jpg" alt="About Us 1" />
+                        </li>
+
+                        <li class="imageGrid__element">
+                            <img class="imageGrid__image" src="img/about-us-2.jpg" alt="About Us 1" />
+                        </li>
+
+                        <li class="imageGrid__element">
+                            <img class="imageGrid__image" src="img/about-us-3.jpg" alt="About Us 1" />
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /about-us -->
+
+        <section id="numbers" class="section">
+
+            <div class="container container--inner">
+
+                <ul class="numbers">
+
+                    <li class="numbers__element">
+                        <strong class="numbers__value typo typo--bold typo--montserrat typo--big" data-countTo="42">42</strong>
+                        <p class="numbers__title typo typo--montserrat typo--upper">Web Design Projects</p>
+                    </li>
+
+                    <li class="numbers__element">
+                        <strong class="numbers__value typo typo--bold typo--montserrat typo--big" data-countTo="123">123</strong>
+                        <p class="numbers__title typo typo--montserrat typo--upper">HAppy Client</p>
+                    </li>
+
+                    <li class="numbers__element">
+                        <strong class="numbers__value typo typo--bold typo--montserrat typo--big" data-countTo="15">15</strong>
+                        <p class="numbers__title typo typo--montserrat typo--upper">Award winner</p>
+                    </li>
+
+                    <li class="numbers__element">
+                        <strong class="numbers__value typo typo--bold typo--montserrat typo--big" data-countTo="99">99</strong>
+                        <p class="numbers__title typo typo--montserrat typo--upper">Cup of coffee</p>
+                    </li>
+
+                    <li class="numbers__element">
+                        <strong class="numbers__value typo typo--bold typo--montserrat typo--big" data-countTo="24">24</strong>
+                        <p class="numbers__title typo typo--montserrat typo--upper">Members</p>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </section>
+
+        <!-- weWorkWith-->
+        <section id="amazingServices" class="section">
+
+            <div class="container container--inner">
+
+                <div class="section__heading">
+
+                    <h2 class="section__heading--top typo typo--kaushan typo--smaller">We work with</h2>
+                    <h3 class="section__heading--bottom typo typo--montserrat typo--medium typo--bold typo--upper">Amazing Services</h3>
+
+                </div>
+
+                <div class="content">
+
+                    <div class="listWithIcon">
+
+                        <ul class="listWithIcon__list">
+
+                            <li class="listWithIcon__element">
+
+                                <div class="listWithIcon__icon">
+
+                                    <svg class="svg svg--alarm">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#alarm"></use>
+                                    </svg>
+
+                                </div>
+
+
+                                <div class="listWithIcon__text">
+
+                                    <h4 class="listWithIcon__title typo typo--montserrat typo--upper">Photography</h4>
+                                    <div class="listWithIcon__content content typo typo--roboto typo--general">
+
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+                            <li class="listWithIcon__element">
+
+                                <div class="listWithIcon__icon">
+
+                                    <svg class="svg svg--linegraph">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#linegraph"></use>
+                                    </svg>
+
+                                </div>
+
+
+                                <div class="listWithIcon__text">
+
+                                    <h4 class="listWithIcon__title typo typo--montserrat typo--upper">Web Design</h4>
+                                    <div class="listWithIcon__content content typo typo--roboto typo--general">
+
+                                        <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+                            <li class="listWithIcon__element">
+
+                                <div class="listWithIcon__icon">
+
+                                    <svg class="svg svg--ok">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#ok"></use>
+                                    </svg>
+
+                                </div>
+
+
+                                <div class="listWithIcon__text">
+
+                                    <h4 class="listWithIcon__title typo typo--montserrat typo--upper">Creativity</h4>
+                                    <div class="listWithIcon__content content typo typo--roboto typo--general">
+
+                                        <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+                            <li class="listWithIcon__element">
+
+                                <div class="listWithIcon__icon">
+
+                                    <svg class="svg svg--book2">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#book2"></use>
+                                    </svg>
+
+                                </div>
+
+
+                                <div class="listWithIcon__text">
+
+                                    <h4 class="listWithIcon__title typo typo--montserrat typo--upper">seo</h4>
+                                    <div class="listWithIcon__content content typo typo--roboto typo--general">
+
+                                        <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+                            <li class="listWithIcon__element">
+
+                                <div class="listWithIcon__icon">
+
+                                    <svg class="svg svg--home">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#home"></use>
+                                    </svg>
+
+                                </div>
+
+
+                                <div class="listWithIcon__text">
+
+                                    <h4 class="listWithIcon__title typo typo--montserrat typo--upper">Css/Html</h4>
+                                    <div class="listWithIcon__content content typo typo--roboto typo--general">
+
+                                        <p>Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+                            <li class="listWithIcon__element">
+
+                                <div class="listWithIcon__icon">
+
+                                    <svg class="svg svg--image">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#image"></use>
+                                    </svg>
+
+                                </div>
+
+
+                                <div class="listWithIcon__text">
+
+                                    <h4 class="listWithIcon__title typo typo--montserrat typo--upper">digital</h4>
+                                    <div class="listWithIcon__content content typo typo--roboto typo--general">
+
+                                        <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+        <!-- /weWorkWith  -->
+
+        <!-- devices -->
+        <section id="uniqueDesign" class="section">
+
+            <div class="container container--inner">
+
+                <div class="section__heading">
+
+                    <h2 class="section__heading--top typo typo--kaushan typo--smaller">For all devices</h2>
+                    <h3 class="section__heading--bottom typo typo--montserrat typo--medium typo--bold typo--upper">Unique design</h3>
+
+                </div>
+
+                <div class="showcase">
+
+                    <div class="showcase__tablet">
+                        <img class="showcase__image" src="img/design-tablet.png" alt="Tablet Mockup" />
+                    </div>
+
+                    <div class="showcase__mobile">
+                        <img class="showcase__image" src="img/design-mobile.png" alt="Mobile Mockup" />
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /devices -->
+
+
+        <section id="whatDoWeDo" class="section">
+
+            <div class="container container--inner">
+
+                <div class="section__heading">
+
+                    <h2 class="section__heading--top typo typo--kaushan typo--smaller">Service</h2>
+                    <h3 class="section__heading--bottom typo typo--montserrat typo--medium typo--bold typo--upper">What do we do</h3>
+
+                </div>
+
+                <div class="section__content content typo typo--roboto typo--general">
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+                </div>
+
+
+                <div class="tabs">
+
+                    <ul class="tabs__list">
+
+                        <li class="tabs__element">
+
+                            <div class="tabs__image">
+                                <img src="img/what-we-do.jpg" alt="What do we do image" />
+                            </div>
+
+                            <div class="tabs__content">
+
+                                <div class="tabs__heading">
+
+                                    <div class="tabs__heading__icon">
+
+                                        <svg class="svg svg--pic">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pic"></use>
+                                        </svg>
+
+                                    </div>
+
+                                    <p class="tabs__heading__title">Photography</p>
+
+                                    <div class="tabs__heading__toggle">
+
+                                        <svg class="svg svg--down">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#down"></use>
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="tabs__text content">
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                </div>
+
+                            </div>
 
                         </li>
 
-                        <li class="navigation__element">
+                        <li class="tabs__element">
 
-                            <a class="navigation__link" href="#section-service" target="_self" data-scroll-offset="56">Service</a>
+                            <div class="tabs__image">
+                                <img src="img/what-we-do.jpg" alt="What do we do image" />
+                            </div>
+
+                            <div class="tabs__content">
+
+                                <div class="tabs__heading">
+
+                                    <div class="tabs__heading__icon">
+
+                                        <svg class="svg svg--pic">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pic"></use>
+                                        </svg>
+
+                                    </div>
+
+                                    <p class="tabs__heading__title">Photography</p>
+
+                                    <div class="tabs__heading__toggle">
+
+                                        <svg class="svg svg--down">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#down"></use>
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="tabs__text content">
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                </div>
+
+                            </div>
 
                         </li>
 
-                        <li class="navigation__element">
+                        <li class="tabs__element">
 
-                            <a class="navigation__link" href="#section-work" target="_self" data-scroll-offset="56">Work</a>
+                            <div class="tabs__image">
+                                <img src="img/what-we-do.jpg" alt="What do we do image" />
+                            </div>
 
-                        </li>
+                            <div class="tabs__content">
 
-                        <li class="navigation__element">
+                                <div class="tabs__heading">
 
-                            <a class="navigation__link" href="#section-blog" target="_self" data-scroll-offset="56">Blog</a>
+                                    <div class="tabs__heading__icon">
 
-                        </li>
+                                        <svg class="svg svg--pic">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pic"></use>
+                                        </svg>
 
-                        <li class="navigation__element">
+                                    </div>
 
-                            <a class="navigation__link" href="#section-contact" target="_self" data-scroll-offset="56">Contact</a>
+                                    <p class="tabs__heading__title">Photography</p>
+
+                                    <div class="tabs__heading__toggle">
+
+                                        <svg class="svg svg--down">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#down"></use>
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="tabs__text content">
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                </div>
+
+                            </div>
 
                         </li>
 
                     </ul>
 
-                    <ul class="navigation__tools">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="quote" class="section">
+
+            <div class="owl-carousel quote quote--icon" data-slider="quote">
+
+                <blockquote class="quote__element">
+
+                    <div class="quote__icon">
+
+                    </div>
+
+                    <div class="quote__content">
+
+                        <div class="content">
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                        </div>
+
+                        <div class="quote__signature">
+
+                            <span class="quote__separator"></span>
+
+                            <p class="quote__author typo typo--kaushan typo--smaller">Jon Doe</p>
+
+                        </div>
+
+                    </div>
+
+                </blockquote>
+
+                <blockquote class="quote__element">
+
+                    <div class="quote__icon">
+
+                    </div>
+
+                    <div class="quote__content">
+
+                        <div class="content">
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                        </div>
+
+                        <div class="quote__signature">
+
+                            <span class="quote__separator"></span>
+
+                            <p class="quote__author typo typo--kaushan typo--smaller">Jon Doe</p>
+
+                        </div>
+
+                    </div>
+
+                </blockquote>
+
+                <blockquote class="quote__element">
+
+                    <div class="quote__icon">
+
+                    </div>
+
+                    <div class="quote__content">
+
+                        <div class="content">
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                        </div>
+
+                        <div class="quote__signature">
+
+                            <span class="quote__separator"></span>
+
+                            <p class="quote__author typo typo--kaushan typo--smaller">Jon Doe</p>
+
+                        </div>
+
+                    </div>
+
+                </blockquote>
+
+            </div>
+
+        </section>
+
+        <section id="whoWeAre" class="section">
+
+            <div class="container container--inner">
+
+                <div class="section__heading">
+
+                    <h2 class="section__heading--top typo typo--kaushan typo--smaller">Who we are</h2>
+                    <h3 class="section__heading--bottom typo typo--montserrat typo--medium typo--bold typo--upper">Meet Our Team</h3>
+
+                </div>
+
+                <div class="section__content content typo typo--roboto typo--general">
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+                </div>
 
 
-                        <li class="navigation__element">
+                <div class="imageGrid imageGrid--bg imageGrid--social imageGrid--titles">
 
-                            <a class="navigation__link" href="#" target="_self" data-scroll-offset="56">
+                    <ul class="imageGrid__list" data-cols="3">
 
-                                <svg class="svg svg--basket">
-                                	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#basket"></use>
-                                </svg>
+                        <li class="imageGrid__element">
+                            <div class="imageGrid__wrapper">
+                                <img src="img/about-us-1.jpg" alt="About Us 1" />
+                                <div class="imageGrid__hidden">
+                                    <div class="social">
+                                        <ul class="social__list">
 
-                            </a>
+                                            <li class="social__element">
+
+                                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                                    <svg class="svg svg--facebook">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#facebook"></use>
+                                                    </svg>
+                                                </a>
+
+
+                                            </li>
+
+                                            <li class="social__element">
+
+                                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                                    <svg class="svg svg--twitter">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#twitter"></use>
+                                                    </svg>
+                                                </a>
+
+                                            </li>
+
+                                            <li class="social__element">
+
+                                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                                    <svg class="svg svg--pinterest">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pinterest"></use>
+                                                    </svg>
+                                                </a>
+
+                                            </li>
+
+                                            <li class="social__element">
+
+                                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                                    <svg class="svg svg--instagram">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#instagram"></use>
+                                                    </svg>
+                                                </a>
+
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="imageGird__titles">
+                                <h5 class="typo typo--montserrat">Matthew Dix</h5>
+                                <h6 class="typo typo--general typo--roboto">Graphic Design</h6>
+                            </div>
+                        </li>
+
+                        <li class="imageGrid__element">
+                            <div class="imageGrid__wrapper">
+                                <img src="img/about-us-2.jpg" alt="About Us 1" />
+                                <div class="imageGrid__hidden">
+                                    <div class="social">
+                                        <ul class="social__list">
+
+                                            <li class="social__element">
+
+                                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                                    <svg class="svg svg--facebook">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#facebook"></use>
+                                                    </svg>
+                                                </a>
+
+
+                                            </li>
+
+                                            <li class="social__element">
+
+                                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                                    <svg class="svg svg--twitter">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#twitter"></use>
+                                                    </svg>
+                                                </a>
+
+                                            </li>
+
+                                            <li class="social__element">
+
+                                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                                    <svg class="svg svg--pinterest">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pinterest"></use>
+                                                    </svg>
+                                                </a>
+
+                                            </li>
+
+                                            <li class="social__element">
+
+                                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                                    <svg class="svg svg--instagram">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#instagram"></use>
+                                                    </svg>
+                                                </a>
+
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="imageGird__titles">
+                                <h5 class="typo typo--montserrat">Christopher Campbell</h5>
+                                <h6 class="typo typo--general typo--roboto">Branding/UX design</h6>
+                            </div>
+                        </li>
+
+                        <li class="imageGrid__element">
+                            <div class="imageGrid__wrapper">
+                                <img src="img/about-us-3.jpg" alt="About Us 1" />
+                                <div class="imageGrid__hidden">
+                                    <div class="social">
+                                        <ul class="social__list">
+
+                                            <li class="social__element">
+
+                                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                                    <svg class="svg svg--facebook">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#facebook"></use>
+                                                    </svg>
+                                                </a>
+
+
+                                            </li>
+
+                                            <li class="social__element">
+
+                                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                                    <svg class="svg svg--twitter">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#twitter"></use>
+                                                    </svg>
+                                                </a>
+
+                                            </li>
+
+                                            <li class="social__element">
+
+                                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                                    <svg class="svg svg--pinterest">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pinterest"></use>
+                                                    </svg>
+                                                </a>
+
+                                            </li>
+
+                                            <li class="social__element">
+
+                                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                                    <svg class="svg svg--instagram">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#instagram"></use>
+                                                    </svg>
+                                                </a>
+
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="imageGird__titles">
+                                <h5 class="typo typo--montserrat">Michael Fertig</h5>
+                                <h6 class="typo typo--general typo--roboto">Developer</h6>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="logos" class="section section--background">
+
+            <div class="logos">
+                <ul class="logos__list">
+                    <li class="logos__element">
+                        <a href="" class="logos_link">
+                            <img src="" alt="" />
+                        </a>
+                    </li>
+
+                    <li class="logos__element">
+                        <a href="" class="logos_link">
+                            <img src="" alt="" />
+                        </a>
+                    </li>
+
+                    <li class="logos__element">
+                        <a href="" class="logos_link">
+                            <img src="" alt="" />
+                        </a>
+                    </li>
+
+                    <li class="logos__element">
+                        <a href="" class="logos_link">
+                            <img src="" alt="" />
+                        </a>
+                    </li>
+
+                    <li class="logos__element">
+                        <a href="" class="logos_link">
+                            <img src="" alt="" />
+                        </a>
+                    </li>
+
+                    <li class="logos__element">
+                        <a href="" class="logos_link">
+                            <img src="" alt="" />
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="ourWork" class="section">
+
+            <div class="container container--inner">
+
+                <div class="section__heading">
+
+                    <h2 class="section__heading--top typo typo--kaushan typo--smaller">What do we do</h2>
+                    <h3 class="section__heading--bottom typo typo--montserrat typo--medium typo--bold typo--upper">Some of Our Work</h3>
+
+                </div>
+
+                <div class="section__content content typo typo--roboto typo--general">
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+                </div>
+
+                <div class="gallery">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="quote" class="section">
+
+            <div class="owl-carousel quote quote--image" data-slider="quoteImage">
+
+                <blockquote class="quote__element">
+
+                    <div class="quote__icon">
+
+                    </div>
+
+                    <div class="quote__content">
+
+                        <div class="content">
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                        </div>
+
+                        <div class="quote__signature">
+
+                            <span class="quote__separator"></span>
+
+                            <p class="quote__author typo typo--kaushan typo--smaller">Jon Doe</p>
+
+                        </div>
+
+                    </div>
+
+                </blockquote>
+
+                <blockquote class="quote__element">
+
+                    <div class="quote__icon">
+
+                    </div>
+
+                    <div class="quote__content">
+
+                        <div class="content">
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                        </div>
+
+                        <div class="quote__signature">
+
+                            <span class="quote__separator"></span>
+
+                            <p class="quote__author typo typo--kaushan typo--smaller">Jon Doe</p>
+
+                        </div>
+
+                    </div>
+
+                </blockquote>
+
+                <blockquote class="quote__element">
+
+                    <div class="quote__icon">
+
+                    </div>
+
+                    <div class="quote__content">
+
+                        <div class="content">
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                        </div>
+
+                        <div class="quote__signature">
+
+                            <span class="quote__separator"></span>
+
+                            <p class="quote__author typo typo--kaushan typo--smaller">Jon Doe</p>
+
+                        </div>
+
+                    </div>
+
+                </blockquote>
+
+            </div>
+
+        </section>
+
+
+        <section id="whatPeopleSay" class="section">
+
+            <div class="container container--inner">
+
+                <div class="section__heading">
+
+                    <h2 class="section__heading--top typo typo--kaushan typo--smaller">Happy Clients</h2>
+                    <h3 class="section__heading--bottom typo typo--montserrat typo--medium typo--bold typo--upper">What People Say</h3>
+
+                </div>
+
+                <div class="clientList">
+
+                    <ul class="clientList__list">
+
+                        <li class="clientList__element">
+
+                            <div class="clientList__image">
+
+                                <img src="img/client-1.jpg" alt="Client 1"  />
+
+                            </div>
+
+                            <div class="clientList__content content">
+                                <p class="clientList__name typo typo--montserrat">Matthew Dix</p>
+                                <p class="clientList__title typo typo--roboto">Graphic Design</p>
+                                <div class="clientList__separator"></div>
+                                <div class="clientList__content content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                                </div>
+                            </div>
 
                         </li>
 
+                        <li class="clientList__element">
 
-                        <li class="navigation__element">
+                            <div class="clientList__image">
 
-                            <a class="navigation__link" href="#" target="_self" data-scroll-offset="56">
+                                <img src="img/client-2.jpg" alt="Client 2"  />
 
-                                <svg class="svg svg--search">
-                                	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#search"></use>
-                                </svg>
+                            </div>
 
-                            </a>
+                            <div class="clientList__content content">
+                                <p class="clientList__name typo typo--montserrat">Nick Karvounis</p>
+                                <p class="clientList__title typo typo--roboto">Graphic Design</p>
+                                <div class="clientList__separator"></div>
+                                <div class="clientList__content content">
+                                    <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="clientList__element">
+
+                            <div class="clientList__image">
+
+                                <img src="img/client-3.jpg" alt="Client 3"  />
+
+                            </div>
+
+                            <div class="clientList__content content">
+                                <p class="clientList__name typo typo--montserrat">Jaelynn Castillo </p>
+                                <p class="clientList__title typo typo--roboto">Graphic Design</p>
+                                <div class="clientList__separator"></div>
+                                <div class="clientList__content content">
+                                    <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="clientList__element">
+
+                            <div class="clientList__image">
+
+                                <img src="img/client-4.jpg" alt="Client 4"  />
+
+                            </div>
+
+                            <div class="clientList__content content">
+                                <p class="clientList__name typo typo--montserrat">Mike Petrucci</p>
+                                <p class="clientList__title typo typo--roboto">Graphic Design</p>
+                                <div class="clientList__separator"></div>
+                                <div class="clientList__content content">
+                                    <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                                </div>
+                            </div>
 
                         </li>
 
                     </ul>
 
-                    <div class="hamburger" id="hamburger-menu">
-
-                      <span class="hamburger__line"></span>
-                      <span class="hamburger__line"></span>
-                      <span class="hamburger__line"></span>
-
-                    </div>
-
-                </nav>
+                </div>
 
             </div>
 
-        </header>
-        <!-- /main-header -->
+        </section>
 
-        <!-- main -->
-        <main class="main main--index">
 
-            <section id="home">
+        <section id="blog" class="section">
 
-                <div class="owl-carousel slider slider--home" data-slider="home">
-                    <div class="slider__item" data-name="Intro">
+            <div class="container container--inner">
 
-                        <img src="img/slider-1.jpg" alt="Slider Name" />
+                <div class="section__heading">
 
-                        <div class="container container--small slider__content">
-
-                            <p class="typo typo--kaushan typo--big">Creative Template</p>
-                            <p class="typo typo--bold typo--montserrat typo--enormous typo--upper">Welcome to MoGo</p>
-
-                            <div class="separator">
-                                <span class="separator__line"></span>
-                            </div>
-
-                            <a href="#" class="typo typo--montserrat typo--bold button">Learn More</a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="slider__item" data-name="work">
-
-                        <img src="img/slider-1.jpg" alt="Slider Name" />
-
-                        <div class="container container--inner slider__content">
-
-                            <p class="typo typo--kaushan typo--big">Creative Template</p>
-                            <p class="typo typo--montserrat typo--enormous typo--upper typo--bold">Welcome <br> to MoGo</p>
-
-                            <div class="separator">
-                                <span class="separator__line"></span>
-                            </div>
-
-                            <a href="#" class="typo typo--montserrat typo--bold button">Learn More</a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="slider__item" data-name="about">
-
-                        <img src="img/slider-1.jpg" alt="Slider Name" />
-
-                        <div class="container container--inner slider__content">
-
-                            <p class="typo typo--kaushan typo--big">Creative Template</p>
-                            <p class="typo typo--montserrat typo--enormous typo--upper typo--bold">Welcome <br> to MoGo</p>
-
-                            <div class="separator">
-                                <span class="separator__line"></span>
-                            </div>
-
-                            <a href="#" class="typo typo--montserrat typo--bold button">Learn More</a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="slider__item" data-name="Contacts">
-
-                        <img src="img/slider-1.jpg" alt="Slider Name" />
-
-                        <div class="container container--inner slider__content">
-
-                            <p class="typo typo--kaushan typo--big">Creative Template</p>
-                            <p class="typo typo--montserrat typo--enormous typo--upper typo--bold">Welcome <br> to MoGo</p>
-
-                            <div class="separator">
-                                <span class="separator__line"></span>
-                            </div>
-
-                            <a href="#" class="typo typo--montserrat typo--bold button">Learn More</a>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="slider slider__nav">
-
-                    <div class="container container--inner">
-
-                        <div class="slider__nav__element slider__nav--active" data-id="0">
-
-                            <div class="progress">
-                                <div class="progress__line"></div>
-                            </div>
-
-                            <p class="slider__nav__title typo typo--upper typo--montserrat"><strong class="slider__nav__id">01</strong> Intro</p>
-
-                        </div>
-
-                        <div class="slider__nav__element" data-id="1">
-
-                            <div class="progress">
-                                <div class="progress__line"></div>
-                            </div>
-
-                            <p class="slider__nav__title typo typo--upper typo--montserrat"><strong class="slider__nav__id">02</strong> Work</p>
-
-                        </div>
-
-                        <div class="slider__nav__element" data-id="2">
-
-                            <div class="progress">
-                                <div class="progress__line"></div>
-                            </div>
-
-                            <p class="slider__nav__title typo typo--upper typo--montserrat"><strong class="slider__nav__id">03</strong> About</p>
-
-                        </div>
-
-                        <div class="slider__nav__element" data-id="3">
-
-                            <div class="progress">
-                                <div class="progress__line"></div>
-                            </div>
-
-                            <p class="slider__nav__title typo typo--upper typo--montserrat"><strong class="slider__nav__id">04</strong> Contacts</p>
-
-                        </div>
-
-                    </div>
+                    <h2 class="section__heading--top typo typo--kaushan typo--smaller">Our Stories</h2>
+                    <h3 class="section__heading--bottom typo typo--montserrat typo--medium typo--bold typo--upper">Latest blog</h3>
 
                 </div>
 
-            </section>
 
-        </main>
-        <!-- /main -->
-
-        <!-- footer -->
-        <footer id="footer">
-
-            <div class="footer">
-
-                <p class="footer__text"></p>
 
             </div>
 
-        </footer>
-        <!-- /footer -->
+            <div class="blog">
+                <article class="blog__article">
+                    <figure class="blog__figure">
+                        <img src="" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="blog__content">
+                        <h3 class="typo typo--montserrat"></h3>
+                        <div class="blog__text content">
 
-        <!-- scripts -->
-        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script type="text/javascript" src="js/app.min.js"></script>
-        <script type="text/javascript" src="_test/test.js"></script>
-        <!-- /scripts -->
+                        </div>
+                        <ul class="blog__info">
+                            <li class="blog__info__element">
+                                <div class="blog__info__icon"></div>
+                            </li>
+                            <li class="blog__info__element">
+                                <div class="blog__info__icon"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="blog__article">
+                    <figure class="blog__figure">
+                        <img src="" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="blog__content">
+                        <h3 class="typo typo--montserrat"></h3>
+                        <div class="blog__text content">
 
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    </body>
+                        </div>
+                        <ul class="blog__info">
+                            <li class="blog__info__element">
+                                <div class="blog__info__icon"></div>
+                            </li>
+                            <li class="blog__info__element">
+                                <div class="blog__info__icon"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="blog__article">
+                    <figure class="blog__figure">
+                        <img src="" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="blog__content">
+                        <h3 class="typo typo--montserrat"></h3>
+                        <div class="blog__text content">
+
+                        </div>
+                        <ul class="blog__info">
+                            <li class="blog__info__element">
+                                <div class="blog__info__icon"></div>
+                            </li>
+                            <li class="blog__info__element">
+                                <div class="blog__info__icon"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+
+    </main>
+    <!-- /main -->
+
+    <!-- footer -->
+    <footer id="footer">
+
+        <div class="footer">
+
+            <p class="footer__text"></p>
+
+        </div>
+
+    </footer>
+    <!-- /footer -->
+
+    <!-- scripts -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.min.js"></script>
+    <script type="text/javascript" src="_test/test.js"></script>
+    <!-- /scripts -->
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
+</body>
 
 </html>

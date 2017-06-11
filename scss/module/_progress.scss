@@ -1,0 +1,17 @@
+.progress {
+    width: 100%;
+    height: 3px;
+    display: block;
+    background: #f38181;
+    overflow: hidden;
+    position: relative;
+
+    &__line {
+        width: 100%;
+        height: 3px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        background: #fff;
+    }
+}

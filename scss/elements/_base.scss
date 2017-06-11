@@ -32,3 +32,28 @@ img {
 * {
     @include border-box;
 }
+
+#aboutUs {
+    padding-top: 106px;
+}
+
+#numbers {
+    margin-top: 110px;
+    background: #95e1d4;
+    color: #fff;
+}
+
+#amazingServices {
+    margin-top: 110px;
+    padding-bottom: 120px;
+
+    .listWithIcon {
+        margin-top: 70px;
+    }
+}
+
+#uniqueDesign {
+    padding-top: 110px;
+    margin-bottom: 90px;
+    background: url(../img/design-bg.jpg) no-repeat center top;
+}

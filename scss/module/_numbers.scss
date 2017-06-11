@@ -1,0 +1,23 @@
+.numbers {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+
+    &__element {
+        flex-basis: 19.95%;
+        max-width: 19.95%;
+        border-right: 1px solid rgba(255, 255, 255, .3);
+        padding: 79px 0 87px;
+
+        &:first-child {
+            border-left: 1px solid rgba(255, 255, 255, .3);
+        }
+    }
+
+    &__title {
+        font-size: 14px;
+        margin-top: 18px;
+    }
+}

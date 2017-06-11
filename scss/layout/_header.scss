@@ -7,7 +7,15 @@
     z-index: map-get($depth, header);
 
     &--active {
-        background: rgba(255, 255, 255, .4);
+        background: #fff;
         padding: 13px 0;
+
+
+        .logo__link,
+        .navigation__link,
+        .svg {
+            color: #333;
+            fill: #333;
+        }
     }
 }

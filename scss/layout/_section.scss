@@ -1,0 +1,39 @@
+.section {
+
+    &__content {
+        color: #999;
+        text-align: center;
+        margin-top: 44px;
+        line-height: 1.6;
+        letter-spacing: .05px;
+    }
+
+    &__heading {
+        text-align: center;
+        color: #333;
+
+        &--top {
+
+        }
+
+        &--bottom {
+            margin-top: 19px;
+            position: relative;
+            padding-bottom: 35px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                height: 3px;
+                width: 60px;
+                background: #f38180;
+            }
+        }
+
+    }
+
+}

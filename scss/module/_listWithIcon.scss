@@ -1,0 +1,64 @@
+.listWithIcon {
+
+    &__list {
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__element {
+        flex-basis: 33.33333%;
+        max-width: 33.33333%;
+        padding-right: 1.45%;
+
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        border-bottom: 1px solid #e5e5e5;
+        box-sizing: content-box;
+        padding: 48px 0;
+
+        &:nth-child(3n+3) {
+            padding-right: 0;
+        }
+
+        &:nth-last-child(-n+3) {
+        padding-bottom: 0;
+        border-bottom: 0;
+        }
+
+        &:nth-child(-n+3) {
+            padding-top: 0;
+        }
+    }
+
+    &__icon {
+        flex-basis: 16.63333%;
+            max-width: 16.63333%;
+    text-align: right;
+    }
+
+    &__text {
+            padding-left: 26px;    flex-basis: 80%;
+    max-width: 80%;
+    }
+
+    &__title {
+        font-size: 14px;
+        color: #333;
+        font-weight: 500;
+    }
+
+    &__content {
+        color: #999;
+        line-height: 1.6;
+    margin-top: 10px;
+    }
+
+    .content {
+    }
+
+}
