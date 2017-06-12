@@ -1,0 +1,53 @@
+
+
+/*
+* @name Buttons
+* @section Components
+* @description
+*  All buttons.
+*/
+
+.c-button {
+    $root: &;
+    font-family: "Lato";
+    font-weight: 900;
+    text-decoration: none;
+    color: $color-white;
+    font-size: 18px;
+    border: 2px solid $color-white;
+    border-radius: 2px;
+    padding: 18px 48px 19px;
+    display: inline-block;
+    transition: all .2s linear;
+
+    &:hover {
+        background: $color-white;
+        color: $color-shaft;
+    }
+
+    &--borders {
+        border-top: 1px solid $color-mine-shaft;
+        border-bottom: 1px solid $color-mine-shaft;
+        border-right: 1px solid $color-silver-chalice;
+        border-left: 1px solid $color-silver-chalice;
+        padding: 15px 23px 16px 22px;
+        border-radius: 0;
+        color: $color-mine-shaft;
+
+        &:hover {
+            background: $color-mine-shaft;
+            color: $color-white;
+        }
+    }
+
+    &--black {
+        color: $color-mine-shaft;
+        border: 1px solid $color-mine-shaft;
+        border-radius: 0;
+
+        &:hover {
+            background: $color-mine-shaft;
+            color: $color-white;
+        }
+    }
+}

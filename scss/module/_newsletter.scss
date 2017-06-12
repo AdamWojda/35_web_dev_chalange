@@ -1,0 +1,102 @@
+/*
+* @name Newsletter
+* @section Modules
+* @description
+*  Site newsletter
+*/
+
+.m-newsletter {
+
+    &__input {
+        border: 1px solid $color-white;
+        background: none;
+        width: 100%;
+        padding: 17px 20px 17px 77px;
+        background: url(../img/email.png) no-repeat 27px center;
+        color: $color-white;
+        position: relative;
+        z-index: 5;
+
+        @include  breakpoint($small) {
+            background: url(../img/email.png) no-repeat 10px center;
+            padding: 17px 20px 17px 37px;
+        }
+
+    }
+
+    &__label {
+        position: absolute;
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 12px;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 81px;
+        transition: top .5s ease-out;
+
+        @include  breakpoint($small) {
+            left: 41px;
+        }
+    }
+
+    &__input:focus + &__label,
+    &__input.has-value + &__label {
+        top: -200px;
+    }
+
+    &__left {
+        position: relative;
+        padding-right: 11%;
+        overflow: hidden;
+
+        @include  breakpoint($xs) {
+            padding-right: 0;
+        }
+
+    }
+
+    &__submit {
+        float: right;
+        background: $color-white;
+        padding: 16px 0 14px;
+        border: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 18px;
+        width: 22.5%;
+        margin-right: 2px;
+        cursor: pointer;
+        transition: background .2s linear;
+
+        @include  breakpoint($xs) {
+            min-width: 95px;
+            font-size: 14px;
+            padding: 18px 0 17px;
+        }
+
+        &:hover {
+            background: $color-mine-shaft;
+            color: $color-white;
+        }
+    }
+
+    &__form {
+        margin-top: 29px;
+    }
+
+    .c-title {
+
+        &--small {
+
+            @include  breakpoint($xs) {
+                text-align: center;
+                line-height: 1.6;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+        }
+
+    }
+
+}

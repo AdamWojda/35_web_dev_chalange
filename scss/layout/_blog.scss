@@ -1,0 +1,46 @@
+.l-blog {
+    text-align: center;
+    margin-top: 60px;
+
+    .m-slider {
+        margin-top: 65px;
+
+
+        .owl {
+            &-controls {
+                position: static;
+                white-space: nowrap;
+            }
+
+            &-prev,
+            &-next {
+                font-size: 0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 28px;
+                height: 49px;
+                display: block;
+            }
+
+            &-prev {
+                background: url(../img/arrows.png) no-repeat top left;
+                left: -120px;
+
+                &:hover {
+                    background: url(../img/arrows.png) no-repeat bottom left;
+                }
+            }
+
+            &-next {
+                background: url(../img/arrows.png) no-repeat top right;
+                right: -120px;
+
+                &:hover {
+                    background: url(../img/arrows.png) no-repeat bottom right;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,23 @@
+
+
+/*
+* @name Links
+* @section Componenets
+* @description
+*  All Links
+*/
+
+.c-link {
+    $root: &;
+
+    &--absolute {
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+    }
+
+}

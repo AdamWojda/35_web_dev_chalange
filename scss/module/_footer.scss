@@ -1,0 +1,30 @@
+/*
+* @name Footer
+* @section Modules
+* @description
+*  Site footer
+*/
+
+.m-footer {
+    text-align: center;
+    margin-top: 69px;
+    margin-bottom: 33px;
+
+    @include  breakpoint($md) {
+        margin-top: 20px;
+    }
+
+    &__text {
+        font-family: "Lato";
+        color: rgba($color-mine-shaft, .6);
+        font-size: 18px;
+    }
+
+    &__heart {
+        background: url(../img/heart.png) no-repeat center center;
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 16px;
+    }
+}

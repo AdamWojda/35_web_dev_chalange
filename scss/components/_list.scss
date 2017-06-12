@@ -1,0 +1,24 @@
+// main: /xampp/htdocs/multiszablon2/scss/style.scss
+
+/*
+* @name Lists
+* @section Componenets
+* @description
+*  Basic list skeletons
+*/
+
+.c-list {
+  font-size: 0;
+
+  &--inline &__element {
+    @include rem(font-size, 1.4rem);
+    @include inline-block();
+    vertical-align: middle;
+    @include rem(margin-right, .5rem);
+  }
+
+  &--inline &__element:last-of-type {
+    margin-right: 0;
+  }
+
+}

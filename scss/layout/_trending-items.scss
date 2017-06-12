@@ -1,0 +1,31 @@
+/*
+* @name Trending items
+* @section Layouts
+* @description
+*  Site products list
+*/
+
+.l-trending-items {
+    text-align: center;
+    margin-top: 59px;
+    padding: 60px 0 8px;
+    background: url(../img/trending-bg.jpg) repeat-y center top;
+
+    .m-slider {
+        margin-top: 59px;
+        padding-bottom: 125px;
+
+        .owl {
+
+            &-dot {
+                background: $color-gray;
+
+                &.active {
+                    box-shadow: 0 0 0 2px $color-monza;
+                }
+            }
+
+        }
+
+    }
+}

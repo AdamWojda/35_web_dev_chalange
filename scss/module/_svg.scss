@@ -16,13 +16,33 @@
     &--ok,
     &--book2,
     &--home,
-    &--image {
+    &--image,
+    &--pic,
+    &--equalizer,
+    &--wir {
         fill: #95e1d3;
+    }
+
+    &--pic {
+        width: 30px;
+        height: 30px;
+    }
+
+    &--equalizer {
+        width: 28px;
+        height: 32px;
+    }
+
+    &--down {
+        width: 22px;
+        height: 12px;
+        fill: #ccc;
     }
 
     &--linegraph,
     &--book2,
-    &--image {
+    &--image,
+    &--wir {
         width: 32px;
         height: 32px;
     }

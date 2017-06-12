@@ -1,0 +1,100 @@
+/*
+* @name Intro
+* @section Layouts
+* @description
+*  Intro section
+*/
+
+.l-intro {
+
+    &__header {
+        margin-top: 110px;
+        padding-left: 3px;
+
+        .c-title--big {
+            margin-top: 22px;
+        }
+
+        .c-separator {
+            max-width: 70px;
+            margin: 32px 0 0;
+            height: 2px;
+            border: 0;
+            background: $color-white;
+        }
+
+        .c-text {
+            font-family: 'Raleway', sans-serif;
+            color: rgba($color-white, .6);
+            margin-top: 36px;
+            font-size: 15px;
+            line-height: 1.5;
+            max-width: 450px;
+            margin-bottom: 43px;
+        }
+
+        .c-button {
+            border: 2px solid $color-white;
+            color: $color-white;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            min-width: 137px;
+            display: inline-block;
+            text-align: center;
+            padding: 12px 0;
+        }
+    }
+
+    .m-slider {
+
+        &__item {
+            position: relative;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba($color-ebony-clay, .4);
+            }
+        }
+        .m-text {
+            z-index: map-get($depth, intro-text);
+            position: absolute;
+            top: 49%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            text-align: center;
+            color: $color-white;
+
+
+
+            @include  breakpoint($md) {
+                max-width: 334px;
+                margin: 0 auto;
+                line-height: 1.2;
+            }
+
+        }
+
+        .c-button {
+            margin-top: 30px;
+            position: relative;
+            top: 22px;
+        }
+
+        &__background {
+
+            @include  breakpoint($mega) {
+                min-height: 705px;
+                object-fit: cover;
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,15 @@
+/*
+* @name Newsletter
+* @section Layouts
+* @description
+*  Newsletter box
+*/
+.l-newsletter {
+    background: url(../img/newsletter.jpg) no-repeat center top;
+    margin-top: 58px;
+    padding: 73px 0 79px;
+
+    @include  breakpoint($xs) {
+        padding: 53px 0 79px;
+    }
+}

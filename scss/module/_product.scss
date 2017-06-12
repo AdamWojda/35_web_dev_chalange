@@ -1,0 +1,150 @@
+/*
+* @name Product
+* @section Modules
+* @description
+*  Site product design
+*/
+
+.m-product {
+
+    &__show {
+        width: 48.6%;
+        float: left;
+
+        @include  breakpoint($xs) {
+            width: 100%;
+            float: none;
+        }
+
+    }
+
+    &__image {
+
+        @include  breakpoint($xs) {
+            width: 100%;
+            object-fit: cover;
+            max-height: 400px;
+            object-position: top;
+        }
+
+    }
+
+    &__details {
+        padding-left: 51%;
+        text-align: left;
+        padding-top: 24px;
+
+        @include  breakpoint($xs) {
+            padding-left: 0;
+        }
+    }
+
+    &__separator {
+        margin: 28px 0 19px 3px;
+        max-width: 31px;
+        background: $color-black;
+    }
+
+    &__content {
+        font-family: "Lato";
+        font-weight: 400;
+        font-size: 18px;
+        margin-left: 1px;
+        margin-top: 21px;
+        letter-spacing: 1.7px;
+        line-height: 1.4;
+        color: $color-boulder;
+
+        p {
+            margin-bottom: 25px;
+
+            &:last-child {
+                margin-bottom: 0;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__size {
+        font-size: 0;
+        margin-top: 87px;
+        margin-left: 3px;
+
+        @include  breakpoint($xs) {
+            text-align: center;
+        }
+
+        @include  breakpoint($sm) {
+            margin-top: 20px;
+        }
+
+        &__element {
+            display: inline-block;
+            margin-right: 30px;
+
+            @include  breakpoint($sm) {
+                margin-right: 0;
+                width: 50%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__buttons {
+        font-size: 0;
+        margin-left: 3px;
+        margin-top: 30px;
+
+        @include  breakpoint($xs) {
+            text-align: center;
+        }
+
+        @include  breakpoint($sm) {
+            margin-top: 0;
+        }
+
+        &__element {
+            display: inline-block;
+            margin-right: 30px;
+
+            @include  breakpoint($sm) {
+                margin-right: 0;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .c-title {
+
+        &--category {
+            font-size: 18px;
+            letter-spacing: 2.2px;
+            margin-top: 24px;
+            margin-left: 2px;
+        }
+
+    }
+
+    .c-button {
+        &--borders {
+            min-width: 71px;
+            text-align: center;
+            cursor: pointer;
+
+            @include  breakpoint($sm) {
+                min-width: 100%;
+            }
+        }
+
+        &--black {
+
+            @include  breakpoint($sm) {
+                min-width: 100%;
+            }
+
+        }
+    }
+
+}
