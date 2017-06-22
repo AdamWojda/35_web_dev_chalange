@@ -1,0 +1,94 @@
+.social {
+    $root: &;
+    &__list {
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__element {
+        display: flex;
+    }
+
+    &--box {
+        .svg {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &--box &__element {
+        width: 55px;
+        background: #fce389;
+        border-right: 1px solid #f38181;
+        height: 55px;
+        transition: all .2s linear;
+
+        &:hover {
+            background: #f38181;
+
+            .svg {
+                fill: #fff;
+            }
+
+        }
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    &--box &__link {
+        display: block;
+        text-align: center;
+        width: 100%;
+        line-height: 52px;
+    }
+
+    &--footer {
+        margin-top: 46px;
+        font-size: 14px;
+        letter-spacing: 0.7px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &--footer &__element {
+        margin-right: 10px;
+    }
+
+    &--footer &__count {
+        flex-basis: 100%;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #e5e5e5;
+        margin-bottom: 18px;
+
+        &__value {
+            font-size: 17px;
+        }
+    }
+
+    &--footer &__text {
+        font-style: italic;
+        font-size: 14px;
+        color: #999;
+        letter-spacing: 0;
+        padding-left: 3px;
+        padding-top: 1px;
+        margin-right: 24px;
+    }
+
+    &--footer &__link .svg {
+        stroke-width: 16px;
+        height: 16px;
+        fill: #95e1d3;
+        transition: fill .2s linear;
+        
+        &:hover {
+            fill: #f38181;
+        }
+    }
+}

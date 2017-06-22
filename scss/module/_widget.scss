@@ -1,0 +1,53 @@
+.widget {
+
+    &__heading {
+        display: block;
+        flex-basis: 100%;
+        margin-bottom: 38px;
+    }
+
+    &--blog {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &--blog &__element {
+            margin-bottom: 30px;
+    }
+
+    &--blog &__figure {
+        display: flex;
+    }
+
+    &--blog &__content {
+        max-width: 204px;
+        padding-left: 21px;
+        font-size: 14px;
+        padding-top: 18px;
+    }
+
+    &--blog &__title {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 6px;
+        letter-spacing: -.5px;
+    }
+
+    &--blog &__time {
+        font-style: italic;
+        font-size: 13px;
+        color: #999;
+    }
+
+    &--instagram {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &--instagram &__element {
+        margin: 0 0 2px 2px;
+    }
+
+
+
+}

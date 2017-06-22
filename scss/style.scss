@@ -21,21 +21,30 @@
         'layout/header';
 
 // Components
-//@import 'components/button';
+@import 'components/button';
 
-// Modules 
-@import 'module/button',
+// Modules
+@import 'module/clientList',
+        'module/blog',
+        'module/footer',
+        'module/gallery',
         'module/imageGrid',
         'module/logo',
+        'module/logos',
         'module/listWithIcon',
         'module/navigation',
         'module/numbers',
+        'module/newsletter',
+        'module/map',
         'module/progress',
         'module/separator',
         'module/showcase',
         'module/svg',
         'module/slider',
-        'module/tabs';
+        'module/social',
+        'module/tabs',
+        'module/widget',
+        'module/quote';
 
 /* ==================================================================================================== */
 /* External CSS

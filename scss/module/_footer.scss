@@ -5,26 +5,40 @@
 *  Site footer
 */
 
-.m-footer {
-    text-align: center;
-    margin-top: 69px;
-    margin-bottom: 33px;
+.footer {
+    display: flex;
 
-    @include  breakpoint($md) {
-        margin-top: 20px;
+    &__col {
+        // flex-basis: 33.33333%;
+        // max-width: 33.33333%;
+
+        &--1 {
+            flex-basis: 46%;
+            max-width: 46%;
+            padding-right: 35px;
+        }
+
+        &--2 {
+            flex-basis: 37%;
+            max-width: 37%;
+        }
+
+        &--3 {
+            flex-basis: 25%;
+            max-width: 25%;
+        }
+    }
+
+    &__heading {
+        font-size: 45px;
+            color: #ccc;
+            letter-spacing: .2px;
+            margin-top: -10px;
     }
 
     &__text {
-        font-family: "Lato";
-        color: rgba($color-mine-shaft, .6);
-        font-size: 18px;
-    }
-
-    &__heart {
-        background: url(../img/heart.png) no-repeat center center;
-        display: inline-block;
-        vertical-align: middle;
-        width: 20px;
-        height: 16px;
+        line-height: 1.6;
+        color: #999;
+        margin-top: 30px;
     }
 }

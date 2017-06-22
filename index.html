@@ -9,7 +9,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,500,700|Roboto:300i,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CMontserrat:400,500,700%7CRoboto:300i,400" rel="stylesheet">
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <!-- /CSS -->
 </head>
@@ -263,20 +263,57 @@
 
                 </div>
 
-                <div class="imageGrid imageGrid--bg imageGrid--text">
+                <div class="ImageGrid ImageGrid--bg ImageGrid--text ImageGrid--simple ImageGrid--show">
 
-                    <ul class="imageGrid__list" data-cols="3">
+                    <ul class="ImageGrid__list" data-cols="3">
 
-                        <li class="imageGrid__element">
-                            <img class="imageGrid__image" src="img/about-us-1.jpg" alt="About Us 1" />
+                        <li class="ImageGrid__element">
+                            <div class="ImageGrid__wrapper">
+                                <img class="ImageGrid__image" src="img/about-us-1.jpg" alt="About Us - Super Team" />
+                            </div>
+
+                            <div class="ImageGrid__hidden">
+                                <div class="ImageGrid__icon">
+
+                                    <svg class="svg svg--users">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#users"></use>
+                                    </svg>
+
+                                </div>
+                                <div class="ImageGrid__text typo typo--upper typo--montserrat typo--small typo--bold">Super Team</div>
+                            </div>
                         </li>
 
-                        <li class="imageGrid__element">
-                            <img class="imageGrid__image" src="img/about-us-2.jpg" alt="About Us 1" />
+                        <li class="ImageGrid__element">
+                            <div class="ImageGrid__wrapper">
+                                <img class="ImageGrid__image" src="img/about-us-2.jpg" alt="About Us -Superb Price" />
+                            </div>
+                            <div class="ImageGrid__hidden">
+                                <div class="ImageGrid__icon">
+
+                                    <svg class="svg svg--basket">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#basket"></use>
+                                    </svg>
+
+                                </div>
+                                <div class="ImageGrid__text typo typo--upper typo--montserrat typo--small typo--bold">Superb Price</div>
+                            </div>
                         </li>
 
-                        <li class="imageGrid__element">
-                            <img class="imageGrid__image" src="img/about-us-3.jpg" alt="About Us 1" />
+                        <li class="ImageGrid__element">
+                            <div class="ImageGrid__wrapper">
+                                <img class="ImageGrid__image" src="img/about-us-3.jpg" alt="About Us - Superb Price" />
+                            </div>
+                            <div class="ImageGrid__hidden">
+                                <div class="ImageGrid__icon">
+
+                                    <svg class="svg svg--ok">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#ok"></use>
+                                    </svg>
+
+                                </div>
+                                <div class="ImageGrid__text typo typo--upper typo--montserrat typo--small typo--bold">Responsive</div>
+                            </div>
                         </li>
 
                     </ul>
@@ -322,7 +359,6 @@
                 </ul>
 
             </div>
-
 
         </section>
 
@@ -708,11 +744,19 @@
 
                         <div class="quote__icon">
 
+                            <div class="quote__icon__wrapper">
+
+                                <svg class="svg svg--speechBuble">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#speechBuble"></use>
+                                </svg>
+
+                            </div>
+
                         </div>
 
                         <div class="quote__content">
 
-                            <div class="content">
+                            <div class="content typo typo--roboto typo--smaller">
                                 <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
                             </div>
 
@@ -732,11 +776,19 @@
 
                         <div class="quote__icon">
 
+                            <div class="quote__icon__wrapper">
+
+                                <svg class="svg svg--speechBuble">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#speechBuble"></use>
+                                </svg>
+
+                            </div>
+
                         </div>
 
                         <div class="quote__content">
 
-                            <div class="content">
+                            <div class="content typo typo--roboto typo--smaller">
                                 <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
                             </div>
 
@@ -756,11 +808,19 @@
 
                         <div class="quote__icon">
 
+                            <div class="quote__icon__wrapper">
+
+                                <svg class="svg svg--speechBuble">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#speechBuble"></use>
+                                </svg>
+
+                            </div>
+
                         </div>
 
                         <div class="quote__content">
 
-                            <div class="content">
+                            <div class="content typo typo--roboto typo--smaller">
                                 <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
                             </div>
 
@@ -782,7 +842,7 @@
 
         </section>
 
-        <section id="whoWeAre" class="section">
+        <section id="ourTeam" class="section">
 
             <div class="container container--inner">
 
@@ -800,15 +860,17 @@
                 </div>
 
 
-                <div class="imageGrid imageGrid--bg imageGrid--social imageGrid--titles">
+                <div class="ImageGrid ImageGrid--bg ImageGrid--show ImageGrid--titles">
 
-                    <ul class="imageGrid__list" data-cols="3">
+                    <ul class="ImageGrid__list" data-cols="3">
 
-                        <li class="imageGrid__element">
-                            <div class="imageGrid__wrapper">
-                                <img src="img/about-us-1.jpg" alt="About Us 1" />
-                                <div class="imageGrid__hidden">
-                                    <div class="social">
+                        <li class="ImageGrid__element">
+                            <div class="ImageGrid__wrapper">
+                                <div class="ImageGrid__background">
+                                    <img class="ImageGrid__image" src="img/team-1.jpg" alt="About Us 1" />
+                                </div>
+                                <div class="ImageGrid__hidden">
+                                    <div class="social social--box">
                                         <ul class="social__list">
 
                                             <li class="social__element">
@@ -857,17 +919,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="imageGird__titles">
-                                <h5 class="typo typo--montserrat">Matthew Dix</h5>
-                                <h6 class="typo typo--general typo--roboto">Graphic Design</h6>
+                            <div class="ImageGrid__titles">
+                                <h5 class="ImageGrid__titles__heading typo typo--montserrat typo--upper">Matthew Dix</h5>
+                                <h6 class="ImageGrid__titles__subHeading typo typo--general typo--roboto">Graphic Design</h6>
                             </div>
                         </li>
 
-                        <li class="imageGrid__element">
-                            <div class="imageGrid__wrapper">
-                                <img src="img/about-us-2.jpg" alt="About Us 1" />
-                                <div class="imageGrid__hidden">
-                                    <div class="social">
+                        <li class="ImageGrid__element">
+                            <div class="ImageGrid__wrapper">
+                                <div class="ImageGrid__background">
+                                    <img class="ImageGrid__image" src="img/team-2.jpg" alt="About Us 1" />
+                                </div>
+                                <div class="ImageGrid__hidden">
+                                    <div class="social social--box">
                                         <ul class="social__list">
 
                                             <li class="social__element">
@@ -916,17 +980,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="imageGird__titles">
-                                <h5 class="typo typo--montserrat">Christopher Campbell</h5>
-                                <h6 class="typo typo--general typo--roboto">Branding/UX design</h6>
+                            <div class="ImageGrid__titles">
+                                <h5 class="ImageGrid__titles__heading typo typo--montserrat typo--upper">Christopher Campbell</h5>
+                                <h6 class="ImageGrid__titles__subHeading typo typo--general typo--roboto">Branding/UX design</h6>
                             </div>
                         </li>
 
-                        <li class="imageGrid__element">
-                            <div class="imageGrid__wrapper">
-                                <img src="img/about-us-3.jpg" alt="About Us 1" />
-                                <div class="imageGrid__hidden">
-                                    <div class="social">
+                        <li class="ImageGrid__element">
+                            <div class="ImageGrid__wrapper">
+                                <div class="ImageGrid__background">
+                                    <img class="ImageGrid__image" src="img/team-3.jpg" alt="About Us 1" />
+                                </div>
+                                <div class="ImageGrid__hidden">
+                                    <div class="social social--box">
                                         <ul class="social__list">
 
                                             <li class="social__element">
@@ -975,9 +1041,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="imageGird__titles">
-                                <h5 class="typo typo--montserrat">Michael Fertig</h5>
-                                <h6 class="typo typo--general typo--roboto">Developer</h6>
+                            <div class="ImageGrid__titles">
+                                <h5 class="ImageGrid__titles__heading typo typo--montserrat typo--upper">Michael Fertig</h5>
+                                <h6 class="ImageGrid__titles__subHeading typo typo--general typo--roboto">Developer</h6>
                             </div>
                         </li>
 
@@ -989,58 +1055,65 @@
 
         </section>
 
-        <section id="logos" class="section section--background">
+        <section id="logos" class="section section--dark">
 
-            <div class="logos">
-                <ul class="logos__list">
-                    <li class="logos__element">
-                        <a href="" class="logos_link">
-                            <img src="" alt="" />
-                        </a>
-                    </li>
+            <div class="container container--inner">
 
-                    <li class="logos__element">
-                        <a href="" class="logos_link">
-                            <img src="" alt="" />
-                        </a>
-                    </li>
+                <div class="logos">
 
-                    <li class="logos__element">
-                        <a href="" class="logos_link">
-                            <img src="" alt="" />
-                        </a>
-                    </li>
+                    <ul class="logos__list">
 
-                    <li class="logos__element">
-                        <a href="" class="logos_link">
-                            <img src="" alt="" />
-                        </a>
-                    </li>
+                        <li class="logos__element">
+                            <a href="" class="logos_link">
+                                <img src="img/logo-1.jpg" alt="" />
+                            </a>
+                        </li>
 
-                    <li class="logos__element">
-                        <a href="" class="logos_link">
-                            <img src="" alt="" />
-                        </a>
-                    </li>
+                        <li class="logos__element">
+                            <a href="" class="logos_link">
+                                <img src="img/logo-2.jpg" alt="" />
+                            </a>
+                        </li>
 
-                    <li class="logos__element">
-                        <a href="" class="logos_link">
-                            <img src="" alt="" />
-                        </a>
-                    </li>
+                        <li class="logos__element">
+                            <a href="" class="logos_link">
+                                <img src="img/logo-3.jpg" alt="" />
+                            </a>
+                        </li>
 
-                </ul>
+                        <li class="logos__element">
+                            <a href="" class="logos_link">
+                                <img src="img/logo-4.jpg" alt="" />
+                            </a>
+                        </li>
+
+                        <li class="logos__element">
+                            <a href="" class="logos_link">
+                                <img src="img/logo-5.jpg" alt="" />
+                            </a>
+                        </li>
+
+                        <li class="logos__element">
+                            <a href="" class="logos_link">
+                                <img src="img/logo-6.jpg" alt="" />
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
             </div>
 
         </section>
 
         <section id="ourWork" class="section">
 
-            <div class="container container--inner">
+            <div class="">
 
                 <div class="section__heading">
 
-                    <h2 class="section__heading--top typo typo--kaushan typo--smaller">What do we do</h2>
+                    <h2 class="section__heading--top typo typo--kaushan typo--smaller">What we do</h2>
                     <h3 class="section__heading--bottom typo typo--montserrat typo--medium typo--bold typo--upper">Some of Our Work</h3>
 
                 </div>
@@ -1053,92 +1126,328 @@
 
                 <div class="gallery">
 
+                    <div class="gallery__element">
+
+                        <figure class="gallery__figure">
+
+                            <div class="gallery__figure__wrapper">
+
+                                <img class="gallery__image" src="img/gallery-1.jpg" alt="Creativley Designed - Image"  />
+
+                            </div>
+
+                            <figcaption class="gallery__figure__figcaption">
+
+                                <div class="gallery__figure__icon">
+
+                                    <svg class="svg svg--pic">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pic"></use>
+                                    </svg>
+
+                                </div>
+
+                                <div class="gallery__figure__title typo typo--layout1">Creativley Designed</div>
+
+                                <div class="gallery__figure__content typo typo--roboto typo--layout2">Lorem ipsum dolor sit...</div>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+
+                        <div class="gallery__element">
+
+                            <figure class="gallery__figure">
+
+                                <div class="gallery__figure__wrapper">
+
+                                    <img class="gallery__image" src="img/gallery-2.jpg" alt="Creativley Produced - Image"  />
+
+                                </div>
+
+                                <figcaption class="gallery__figure__figcaption">
+
+                                    <div class="gallery__figure__icon">
+
+                                        <svg class="svg svg--pic">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pic"></use>
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="gallery__figure__title typo typo--layout1">Creativley Produced</div>
+
+                                    <div class="gallery__figure__content typo typo--roboto typo--layout2">Lorem ipsum dolor sit...</div>
+
+                                </figcaption>
+
+                            </figure>
+
+                        </div>
+
+                    <div class="gallery__element gallery__element--double">
+
+                        <figure class="gallery__figure">
+
+                            <div class="gallery__figure__wrapper">
+
+                                <img class="gallery__image" src="img/gallery-3.jpg" alt="Responsivity - Image"  />
+
+                            </div>
+
+                            <figcaption class="gallery__figure__figcaption">
+
+                                <div class="gallery__figure__icon">
+
+                                    <svg class="svg svg--pic">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pic"></use>
+                                    </svg>
+
+                                </div>
+
+                                <div class="gallery__figure__title typo typo--layout1">Responsivity</div>
+
+                                <div class="gallery__figure__content typo typo--roboto typo--layout2">Lorem ipsum dolor sit...</div>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+
+                    <div class="gallery__element">
+
+                        <figure class="gallery__figure">
+
+                            <div class="gallery__figure__wrapper">
+
+                                <img class="gallery__image" src="img/gallery-4.jpg" alt="Some another title - Image"  />
+
+                            </div>
+
+                            <figcaption class="gallery__figure__figcaption">
+
+                                <div class="gallery__figure__icon">
+
+                                    <svg class="svg svg--pic">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pic"></use>
+                                    </svg>
+
+                                </div>
+
+                                <div class="gallery__figure__title typo typo--layout1">Some another title</div>
+
+                                <div class="gallery__figure__content typo typo--roboto typo--layout2">Lorem ipsum dolor sit...</div>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+
+                    <div class="gallery__element">
+
+                        <figure class="gallery__figure">
+
+                            <div class="gallery__figure__wrapper">
+
+                                <img class="gallery__image" src="img/gallery-5.jpg" alt="Some title - Image"  />
+
+                            </div>
+
+                            <figcaption class="gallery__figure__figcaption">
+
+                                <div class="gallery__figure__icon">
+
+                                    <svg class="svg svg--pic">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pic"></use>
+                                    </svg>
+
+                                </div>
+
+                                <div class="gallery__figure__title typo typo--layout1">Some title</div>
+
+                                <div class="gallery__figure__content typo typo--roboto typo--layout2">Lorem ipsum dolor sit...</div>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+
+                    <div class="gallery__element">
+
+                        <figure class="gallery__figure">
+
+                            <div class="gallery__figure__wrapper">
+
+                                <img class="gallery__image" src="img/gallery-6.jpg" alt="Architecture - Image"  />
+
+                            </div>
+
+                            <figcaption class="gallery__figure__figcaption">
+
+                                <div class="gallery__figure__icon">
+
+                                    <svg class="svg svg--pic">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pic"></use>
+                                    </svg>
+
+                                </div>
+
+                                <div class="gallery__figure__title typo typo--layout1">Architecture</div>
+
+                                <div class="gallery__figure__content typo typo--roboto typo--layout2">Lorem ipsum dolor sit...</div>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+
+                    <div class="gallery__element">
+
+                        <figure class="gallery__figure">
+
+                            <div class="gallery__figure__wrapper">
+
+                                <img class="gallery__image" src="img/gallery-7.jpg" alt="Title - Image"  />
+
+                            </div>
+
+                            <figcaption class="gallery__figure__figcaption">
+
+                                <div class="gallery__figure__icon">
+
+                                    <svg class="svg svg--pic">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pic"></use>
+                                    </svg>
+
+                                </div>
+
+                                <div class="gallery__figure__title typo typo--layout1">Title</div>
+
+                                <div class="gallery__figure__content typo typo--roboto typo--layout2">Lorem ipsum dolor sit...</div>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
                 </div>
 
             </div>
 
         </section>
 
-        <section id="quote" class="section">
+        <section id="quoteGallery" class="section">
 
-            <div class="owl-carousel quote quote--image" data-slider="quoteImage">
+            <div class="container container--inner">
 
-                <blockquote class="quote__element">
+                <div class="owl-carousel quote quote--icon" data-slider="quoteImage">
 
-                    <div class="quote__icon">
+                    <blockquote class="quote__element">
 
-                    </div>
+                        <div class="quote__icon">
 
-                    <div class="quote__content">
+                            <div class="quote__icon__wrapper">
 
-                        <div class="content">
-                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                        </div>
+                                <svg class="svg svg--speechBuble">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#speechBuble"></use>
+                                </svg>
 
-                        <div class="quote__signature">
-
-                            <span class="quote__separator"></span>
-
-                            <p class="quote__author typo typo--kaushan typo--smaller">Jon Doe</p>
+                            </div>
 
                         </div>
 
-                    </div>
+                        <div class="quote__content">
 
-                </blockquote>
+                            <div class="content typo typo--roboto typo--smaller">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                            </div>
 
-                <blockquote class="quote__element">
+                            <div class="quote__signature">
 
-                    <div class="quote__icon">
+                                <span class="quote__separator"></span>
 
-                    </div>
+                                <p class="quote__author typo typo--kaushan typo--smaller">Jon Doe</p>
 
-                    <div class="quote__content">
-
-                        <div class="content">
-                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                        </div>
-
-                        <div class="quote__signature">
-
-                            <span class="quote__separator"></span>
-
-                            <p class="quote__author typo typo--kaushan typo--smaller">Jon Doe</p>
+                            </div>
 
                         </div>
 
-                    </div>
+                    </blockquote>
 
-                </blockquote>
+                    <blockquote class="quote__element">
 
-                <blockquote class="quote__element">
+                        <div class="quote__icon">
 
-                    <div class="quote__icon">
+                            <div class="quote__icon__wrapper">
 
-                    </div>
+                                <svg class="svg svg--speechBuble">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#speechBuble"></use>
+                                </svg>
 
-                    <div class="quote__content">
-
-                        <div class="content">
-                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                        </div>
-
-                        <div class="quote__signature">
-
-                            <span class="quote__separator"></span>
-
-                            <p class="quote__author typo typo--kaushan typo--smaller">Jon Doe</p>
+                            </div>
 
                         </div>
 
-                    </div>
+                        <div class="quote__content">
 
-                </blockquote>
+                            <div class="content typo typo--roboto typo--smaller">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                            </div>
+
+                            <div class="quote__signature">
+
+                                <span class="quote__separator"></span>
+
+                                <p class="quote__author typo typo--kaushan typo--smaller">Jon Doe</p>
+
+                            </div>
+
+                        </div>
+
+                    </blockquote>
+
+                    <blockquote class="quote__element">
+
+                        <div class="quote__icon">
+
+                            <div class="quote__icon__wrapper">
+
+                                <svg class="svg svg--speechBuble">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#speechBuble"></use>
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="quote__content">
+
+                            <div class="content typo typo--roboto typo--smaller">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                            </div>
+
+                            <div class="quote__signature">
+
+                                <span class="quote__separator"></span>
+
+                                <p class="quote__author typo typo--kaushan typo--smaller">Jon Doe</p>
+
+                            </div>
+
+                        </div>
+
+                    </blockquote>
+
+                </div>
 
             </div>
 
         </section>
-
 
         <section id="whatPeopleSay" class="section">
 
@@ -1159,7 +1468,7 @@
 
                             <div class="clientList__image">
 
-                                <img src="img/client-1.jpg" alt="Client 1"  />
+                                <img class="clientList__image__element" src="img/client-1.jpg" alt="Client 1"  />
 
                             </div>
 
@@ -1167,7 +1476,7 @@
                                 <p class="clientList__name typo typo--montserrat">Matthew Dix</p>
                                 <p class="clientList__title typo typo--roboto">Graphic Design</p>
                                 <div class="clientList__separator"></div>
-                                <div class="clientList__content content">
+                                <div class="clientList__text content">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
                                 </div>
                             </div>
@@ -1178,7 +1487,7 @@
 
                             <div class="clientList__image">
 
-                                <img src="img/client-2.jpg" alt="Client 2"  />
+                                <img class="clientList__image__element" src="img/client-2.jpg" alt="Client 2"  />
 
                             </div>
 
@@ -1186,7 +1495,7 @@
                                 <p class="clientList__name typo typo--montserrat">Nick Karvounis</p>
                                 <p class="clientList__title typo typo--roboto">Graphic Design</p>
                                 <div class="clientList__separator"></div>
-                                <div class="clientList__content content">
+                                <div class="clientList__text content">
                                     <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                                 </div>
                             </div>
@@ -1197,7 +1506,7 @@
 
                             <div class="clientList__image">
 
-                                <img src="img/client-3.jpg" alt="Client 3"  />
+                                <img class="clientList__image__element" src="img/client-3.jpg" alt="Client 3"  />
 
                             </div>
 
@@ -1205,7 +1514,7 @@
                                 <p class="clientList__name typo typo--montserrat">Jaelynn Castillo </p>
                                 <p class="clientList__title typo typo--roboto">Graphic Design</p>
                                 <div class="clientList__separator"></div>
-                                <div class="clientList__content content">
+                                <div class="clientList__text content">
                                     <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                                 </div>
                             </div>
@@ -1216,7 +1525,7 @@
 
                             <div class="clientList__image">
 
-                                <img src="img/client-4.jpg" alt="Client 4"  />
+                                <img class="clientList__image__element" src="img/client-4.jpg" alt="Client 4"  />
 
                             </div>
 
@@ -1224,7 +1533,7 @@
                                 <p class="clientList__name typo typo--montserrat">Mike Petrucci</p>
                                 <p class="clientList__title typo typo--roboto">Graphic Design</p>
                                 <div class="clientList__separator"></div>
-                                <div class="clientList__content content">
+                                <div class="clientList__text content">
                                     <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
                                 </div>
                             </div>
@@ -1239,84 +1548,255 @@
 
         </section>
 
-
         <section id="blog" class="section">
 
             <div class="container container--inner">
 
                 <div class="section__heading">
 
-                    <h2 class="section__heading--top typo typo--kaushan typo--smaller">Our Stories</h2>
+                    <h2 class="section__heading--top typo typo--kaushan typo--smaller">Our stories</h2>
                     <h3 class="section__heading--bottom typo typo--montserrat typo--medium typo--bold typo--upper">Latest blog</h3>
 
                 </div>
 
+                <div class="blog">
 
+                    <article class="blog__article">
+
+                        <a href="#" class="blog__link" title="Artykuł - Lorem ipsum dolor sit amet">
+
+                            <figure class="blog__figure">
+
+                                <img  class="blog__figure__image" src="img/blog-2.jpg" alt="Lorem ipsum dolor sit amet">
+
+                                <figcaption class="blog__figure__content">
+
+                                    <time class="blog__figure__date typo typo--montserrat typo--bold typo--medium" datetime="2017-06-15 14:00"><strong class="blog__figure__date__day typo typo--montserrat typo--bold typo--medium" >15</strong> Jan</time>
+
+                                </figcaption>
+
+                            </figure>
+                            
+                        </a>
+
+                        <div class="blog__content">
+
+                            <a href="#"  title="Artykuł - Lorem ipsum dolor sit amet">
+
+                                <h3 class="typo typo--montserrat">Lorem ipsum dolor sit amet</h3>
+                                <div class="blog__text content typo typo--roboto typo--general">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                            </a>
+
+                            <ul class="blog__info">
+
+                                <li class="blog__info__element">
+
+                                    <div class="blog__info__icon">
+
+                                        <svg class="svg svg--view">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#view"></use>
+                                        </svg>
+
+                                    </div>
+
+                                    <span class="blog__info__number">542</span>
+
+                                </li>
+
+                                <li class="blog__info__element">
+
+                                    <div class="blog__info__icon">
+
+                                        <svg class="svg svg--speech">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#speech"></use>
+                                        </svg>
+
+                                    </div>
+
+                                    <span class="blog__info__number">17</span>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+                    <article class="blog__article">
+
+                        <a href="#" class="blog__link" title="Artykuł - Lorem ipsum dolor sit amet">
+
+                            <figure class="blog__figure">
+
+                                <img  class="blog__figure__image" src="img/blog-1.jpg" alt="Lorem ipsum dolor sit amet">
+
+                                <figcaption class="blog__figure__content">
+
+                                    <time class="blog__figure__date typo typo--montserrat typo--bold typo--medium" datetime="2017-06-15 14:00"><strong class="blog__figure__date__day typo typo--montserrat typo--bold typo--medium" >15</strong> Jan</time>
+
+                                </figcaption>
+
+                            </figure>
+
+                        </a>
+
+                        <div class="blog__content">
+
+                            <a href="#"  title="Artykuł - Lorem ipsum dolor sit amet">
+
+                                <h3 class="typo typo--montserrat">Lorem ipsum dolor sit amet</h3>
+                                <div class="blog__text content typo typo--roboto typo--general">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                            </a>
+
+                            <ul class="blog__info">
+
+                                <li class="blog__info__element">
+
+                                    <div class="blog__info__icon">
+
+                                        <svg class="svg svg--view">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#view"></use>
+                                        </svg>
+
+                                    </div>
+
+                                    <span class="blog__info__number">542</span>
+
+                                </li>
+
+                                <li class="blog__info__element">
+
+                                    <div class="blog__info__icon">
+
+                                        <svg class="svg svg--speech">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#speech"></use>
+                                        </svg>
+
+                                    </div>
+
+                                    <span class="blog__info__number">17</span>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+                    <article class="blog__article">
+
+                        <a href="#" class="blog__link" title="Artykuł - Lorem ipsum dolor sit amet">
+                            <figure class="blog__figure">
+
+                                <img  class="blog__figure__image" src="img/blog-3.jpg" alt="Lorem ipsum dolor sit amet">
+
+                                <figcaption class="blog__figure__content">
+
+                                    <time class="blog__figure__date typo typo--roboto" datetime="2017-06-15 14:00"><strong class="blog__figure__date__day typo typo--montserrat typo--bold typo--medium">15</strong> Jan</time>
+
+                                </figcaption>
+
+                            </figure>
+                        </a>
+
+                        <div class="blog__content">
+
+                            <a href="#" title="Artykuł - Lorem ipsum dolor sit amet">
+
+                                <h3 class="typo typo--montserrat">Lorem ipsum dolor sit amet</h3>
+                                <div class="blog__text content typo typo--roboto typo--general">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                            </a>
+
+                            <ul class="blog__info">
+
+                                <li class="blog__info__element">
+
+                                    <div class="blog__info__icon">
+
+                                        <svg class="svg svg--view">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#view"></use>
+                                        </svg>
+
+                                    </div>
+
+                                    <span class="blog__info__number">542</span>
+
+                                </li>
+
+                                <li class="blog__info__element">
+
+                                    <div class="blog__info__icon">
+
+                                        <svg class="svg svg--speech">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#speech"></use>
+                                        </svg>
+
+                                    </div>
+
+                                    <span class="blog__info__number">17</span>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+                </div>
 
             </div>
 
-            <div class="blog">
-                <article class="blog__article">
-                    <figure class="blog__figure">
-                        <img src="" alt="">
-                        <figcaption></figcaption>
-                    </figure>
-                    <div class="blog__content">
-                        <h3 class="typo typo--montserrat"></h3>
-                        <div class="blog__text content">
+        </section>
+
+        <section id="mapsection" class="section">
+
+            <div class="map">
+
+                <a href="#" class="map__close">
+
+                    <svg class="svg svg--close">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#close"></use>
+                    </svg>
+
+                </a>
+
+                <div class="map__wrapper">
+
+                    <a href="#" class="map__overlay js-trigger is-inactive" data-trigger-element=".map">
+
+
+                        <div class="map__overlay__text">
+
+                            <div class="map__overlay__icon">
+
+                                <svg class="svg svg--map">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#map"></use>
+                                </svg>
+
+                            </div>
+
+                            <h2 class="map__overlay__title typo typo--montserrat typo--bold typo--upper typo--smaller">Open Map</h2>
+
+                            <div class="map__overlay__separator"></div>
 
                         </div>
-                        <ul class="blog__info">
-                            <li class="blog__info__element">
-                                <div class="blog__info__icon"></div>
-                            </li>
-                            <li class="blog__info__element">
-                                <div class="blog__info__icon"></div>
-                            </li>
-                        </ul>
-                    </div>
-                </article>
-                <article class="blog__article">
-                    <figure class="blog__figure">
-                        <img src="" alt="">
-                        <figcaption></figcaption>
-                    </figure>
-                    <div class="blog__content">
-                        <h3 class="typo typo--montserrat"></h3>
-                        <div class="blog__text content">
 
-                        </div>
-                        <ul class="blog__info">
-                            <li class="blog__info__element">
-                                <div class="blog__info__icon"></div>
-                            </li>
-                            <li class="blog__info__element">
-                                <div class="blog__info__icon"></div>
-                            </li>
-                        </ul>
-                    </div>
-                </article>
-                <article class="blog__article">
-                    <figure class="blog__figure">
-                        <img src="" alt="">
-                        <figcaption></figcaption>
-                    </figure>
-                    <div class="blog__content">
-                        <h3 class="typo typo--montserrat"></h3>
-                        <div class="blog__text content">
+                    </a>
 
-                        </div>
-                        <ul class="blog__info">
-                            <li class="blog__info__element">
-                                <div class="blog__info__icon"></div>
-                            </li>
-                            <li class="blog__info__element">
-                                <div class="blog__info__icon"></div>
-                            </li>
-                        </ul>
-                    </div>
-                </article>
+                    <div id="map" class="map__element"></div>
+
+                </div>
+
             </div>
+
+
+            <div class="map__spacer"></div>
 
         </section>
 
@@ -1326,9 +1806,233 @@
     <!-- footer -->
     <footer id="footer">
 
-        <div class="footer">
+        <div class="container container--inner">
 
-            <p class="footer__text"></p>
+            <div class="footer">
+
+                <div class="footer__col footer__col--1">
+
+                    <h5 class="footer__heading typo typo--montserrat typo--bold">MoGo</h5>
+
+                    <div class="footer__text typo typo--roboto typo--general">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam repudiandae, et labore nesciunt, nobis laudantium ipsa temporibus nam illum quidem voluptates quo sequi dolore dicta animi inventore, odio dolores. Velit!
+                    </div>
+
+
+                    <div class="social social--footer">
+
+                        <div class="social__count typo typo--montserrat"><strong class="social__count__value typo--bold">15k</strong> followers</div>
+
+                        <div class="social__text typo typo--roboto typo--general">Follow Us:</div>
+
+                        <ul class="social__list">
+
+                            <li class="social__element">
+
+                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                    <svg class="svg svg--facebook">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#facebook"></use>
+                                    </svg>
+                                </a>
+
+                            </li>
+                            <li class="social__element">
+
+                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                    <svg class="svg svg--twitter">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#twitter"></use>
+                                    </svg>
+                                </a>
+
+                            </li>
+                            <li class="social__element">
+
+                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                    <svg class="svg svg--instagram">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#instagram"></use>
+                                    </svg>
+                                </a>
+
+                            </li>
+                            <li class="social__element">
+
+                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                    <svg class="svg svg--pinterest">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#pinterest"></use>
+                                    </svg>
+                                </a>
+
+                            </li>
+                            <li class="social__element">
+
+                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                    <svg class="svg svg--googleplus">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#googleplus"></use>
+                                    </svg>
+                                </a>
+
+                            </li>
+                            <li class="social__element">
+
+                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                    <svg class="svg svg--youtube">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#youtube"></use>
+                                    </svg>
+                                </a>
+
+                            </li>
+                            <li class="social__element">
+
+                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                    <svg class="svg svg--dribbble">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#dribbble"></use>
+                                    </svg>
+                                </a>
+
+                            </li>
+                            <li class="social__element">
+
+                                <a class="social__link" href="#" rel="nofollow" target="_blank">
+                                    <svg class="svg svg--tumblr">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#tumblr"></use>
+                                    </svg>
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="newsletter">
+
+                        <form id="newsletter" class="newsletter__form form">
+
+                            <input class="newsletter__email form__input" type="text" placeholder="Your Email"  />
+
+                            <input class="newsletter__submit form__submit typo typo--montserrat typo--bold typo--uppercase" type="submit" value="Subscribe"  />
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="footer__col footer__col--2">
+
+                    <div class="widget widget--blog">
+
+                        <h4 class="widget__heading typo typo--montserrat typo--layout1 typo--upper">Blogs</h4>
+
+                        <div class="widget__element">
+
+                            <figure class="widget__figure">
+
+                                <img src="img/footer-1.jpg" alt="" class="widget__image">
+
+                                <figcaption class="widget__content">
+
+                                    <h2 class="widget__title typo typo--layout1 typo--montserrat">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
+
+                                    <time class="widget__time typo typo--roboto" datetime="2017-06-09 14:00">Jan 9, 2016</time>
+
+                                </figcaption>
+
+                            </figure>
+
+                        </div>
+
+                        <div class="widget__element">
+
+                            <figure class="widget__figure">
+
+                                <img src="img/footer-2.jpg" alt="" class="widget__image">
+
+                                <figcaption class="widget__content">
+
+                                    <h2 class="widget__title typo typo--layout1 typo--montserrat">Consectetur adipiscing elit, sed do eiusmod tempor</h2>
+
+                                    <time class="widget__time typo typo--roboto" datetime="2017-06-09 14:00">Jan 9, 2016</time>
+
+                                </figcaption>
+
+                            </figure>
+
+                        </div>
+
+                        <div class="widget__element">
+
+                            <figure class="widget__figure">
+
+                                <img src="img/footer-3.jpg" alt="" class="widget__image">
+
+                                <figcaption class="widget__content">
+
+                                    <h2 class="widget__title typo typo--layout1 typo--montserrat">sed do eiusmod tempor incididunt ut labore</h2>
+
+                                    <time class="widget__time typo typo--roboto" datetime="2017-06-09 14:00">Jan 9, 2016</time>
+
+                                </figcaption>
+
+                            </figure>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="footer__col footer__col--3">
+
+                    <div class="widget widget--instagram">
+
+                        <h4 class="widget__heading typo typo--montserrat typo--layout1 typo--upper">Instagram</h4>
+
+                        <div class="widget__element">
+                            <img class="widget__image" src="img/instagram.jpg" alt="Instagram image 1"  />
+                        </div>
+
+                        <div class="widget__element">
+                            <img class="widget__image" src="img/instagram.jpg" alt="Instagram image 1"  />
+                        </div>
+
+                        <div class="widget__element">
+                            <img class="widget__image" src="img/instagram.jpg" alt="Instagram image 1"  />
+                        </div>
+
+
+                        <div class="widget__element">
+                            <img class="widget__image" src="img/instagram.jpg" alt="Instagram image 1"  />
+                        </div>
+
+                        <div class="widget__element">
+                            <img class="widget__image" src="img/instagram.jpg" alt="Instagram image 1"  />
+                        </div>
+
+                        <div class="widget__element">
+                            <img class="widget__image" src="img/instagram.jpg" alt="Instagram image 1"  />
+                        </div>
+
+
+
+                        <div class="widget__element">
+                            <img class="widget__image" src="img/instagram.jpg" alt="Instagram image 1"  />
+                        </div>
+
+                        <div class="widget__element">
+                            <img class="widget__image" src="img/instagram.jpg" alt="Instagram image 1"  />
+                        </div>
+
+                        <div class="widget__element">
+                            <img class="widget__image" src="img/instagram.jpg" alt="Instagram image 1"  />
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -1338,6 +2042,7 @@
     <!-- scripts -->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/app.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBDMiMIIW8x1vTJJyJaTp8ad3tt89CDxQ&callback=initMap"></script>
     <script type="text/javascript" src="_test/test.js"></script>
     <!-- /scripts -->
 

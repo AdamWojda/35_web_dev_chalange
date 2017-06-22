@@ -1,4 +1,4 @@
-# MoGo (focused on flexbox)
+# MoGo
 ## 35 Weekly Web Dev Challange (https://adamwojda.github.io/35_web_dev_challenge/)
 
 
@@ -8,4 +8,4 @@
 | IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions
 
 ### Description
-CSS is precompiled by SASS, in order to keep scss folder organized we use ITCSS, for css selectors we use BEM. For icons we use SVG compressed to sprite with shape method, more here https://css-tricks.com/svg-use-external-source/
+In Progress :)

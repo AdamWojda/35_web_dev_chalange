@@ -1,4 +1,4 @@
-.imageGrid {
+.ImageGrid {
     $root: &;
 
     margin-top: 98px;
@@ -25,7 +25,122 @@
         }
     }
 
-    &--bg {
+    &__hidden {
+        width: 100%;
+        @include centering();
+        text-align: center;
+        z-index: map_get($depth, imageGridSocialIcons);
+        opacity: 0;
+        top: 0;
+        transition: top .4s ease-in, opacity .3s linear;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__icon {
+        .svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+        }
+    }
+
+    &__text {
+        color: #fff;
+    }
+
+    &--show {
+        #{$root}__element {
+
+            &:hover {
+                #{$root}__hidden {
+                    opacity: 1;
+                    top: 50%;
+                }
+            }
+
+        }
+
+    }
+
+
+    &--bg:not(.ImageGrid--simple) {
+
+        #{$root}__titles {
+            background: #fff;
+            position: relative;
+            z-index: 1000;
+        }
+
+        #{$root}__image {
+            top: 0;
+            left: 0;
+            margin-top: 0;
+            margin-left: 0;
+            transition: left .2s linear, top .2s linear;
+        }
+
+        #{$root}__element {
+            transition: background .2s linear;
+
+            #{$root}__background:before {
+                content: '';
+                transition: box-shadow .1s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .2s linear, top .2s linear, left .2s linear;
+                top: 0;
+                left: 0;
+                box-shadow: none;
+                opacity: 0;
+            }
+
+            &:hover {
+                position: relative;
+
+                #{$root}__image {
+                    margin-top: 0;
+                    margin-left: 0;
+                    position: relative;
+                    top: -10px;
+                    left: -10px;
+                }
+
+                #{$root}__background {
+
+                    &:before {
+                        @include fill-with-absolute('top', 'left', 10);
+
+                        content: '';
+                        opacity: 1;
+                        background: #f38181;
+                        background: linear-gradient(to bottom, rgba(243, 129, 129, 0.98) 0%, rgba(252, 227, 138, 0.9) 100%);
+                        top: -10px;
+                        left: -10px;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+
+    &--bg.ImageGrid--simple {
+
+        #{$root}__hidden {
+            top:50%;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            opacity: 0;
+            transition: opacity .2s linear, padding-bottom .2s linear, padding-right .2s linear;
+        }
+
+        #{$root}__titles {
+            background: #fff;
+            position: relative;
+            z-index: 1000;
+        }
 
         #{$root}__image {
             margin-top: 0;
@@ -35,8 +150,9 @@
 
         #{$root}__element {
             transition: background .2s linear;
+            position: relative;
 
-            &:before {
+            #{$root}__wrapper:before {
                 content: '';
                 transition: box-shadow .1s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .2s linear, top .2s linear, left .2s linear;
                 top: 0;
@@ -49,20 +165,28 @@
                 position: relative;
                 background: #95e1d4;
 
+                #{$root}__hidden {
+                    padding-bottom: 0;
+                    padding-right: 0;
+                }
+
                 #{$root}__image {
                     margin-top: -10px;
                     margin-left: -10px;
                 }
 
-                &:before {
-                    @include fill-with-absolute('top', 'left', 10);
+                #{$root}__wrapper {
 
-                    content: '';
-                    opacity: 1;
-                    background: #f38181;
-                    background: linear-gradient(to bottom, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%);
-                    top: -10px;
-                    left: -10px;
+                    &:before {
+                        @include fill-with-absolute('top', 'left', 10);
+
+                        content: '';
+                        opacity: 1;
+                        background: #f38181;
+                        background: linear-gradient(to bottom, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%);
+                        top: 0;
+                        left: -10px;
+                    }
                 }
 
             }
@@ -71,4 +195,51 @@
 
     }
 
+
+    &--titles {
+
+        #{$root}__titles {
+            text-align: center;
+            margin-top: 28px;
+
+            &__heading {
+                font-weight: 500;
+font-size: 14px;
+color: #333;
+            }
+
+            &__subHeading {
+                font-style: italic;
+color: #999;
+margin-top: 13px;
+            }
+        }
+
+        #{$root}__background {
+            position: relative;
+
+        }
+
+        #{$root}__element {
+            background: transparent;
+
+            &:hover {
+
+            #{$root}__image {
+                margin-top: 0;
+            }
+
+                #{$root}__background:before {
+                    top: -10px;
+                    left: -10px;
+                }
+
+                    #{$root}__wrapper {
+                    background: #95e1d4;
+                    }
+            }
+
+        }
+
+    }
 }

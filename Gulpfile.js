@@ -11,22 +11,47 @@ var gulp         = require('gulp'),
     browserSync  = require('browser-sync'),
     svgSprite    = require('gulp-svg-sprite'),
     notify       = require('gulp-notify'),
+    babel        = require('gulp-babel'),
+    eslint       = require('gulp-eslint'),
     order        = require('gulp-order');
 
-const config = {
-      mode: {
+var config = {
+    mode: {
         symbol: { // symbol mode to build the SVG
-          render: {
-            css: false, // CSS output option for icon sizing
-            scss: false // SCSS output option for icon sizing
-          },
-          dest: './', // destination folder
-          prefix: '.svg--%s', // BEM-style prefix if styles rendered
-          sprite: 'all-sprite.svg', //generated sprite name
-          example: true // Build a sample page, please!
+            render: {
+                css: false, // CSS output option for icon sizing
+                scss: false // SCSS output option for icon sizing
+            },
+            dimension: {// Set maximum dimensions
+                width: 42,
+                height: 42
+            },
+            dest: './', // destination folder
+            sprite: 'all-sprite.svg', //generated sprite name
+            example: true // Build a sample page, please!
         }
-      }
+    }
 };
+
+gulp.task('svg', function() {
+    return gulp.src('img/svg/**/*.svg')
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('img/svg/'));
+});
+
+
+gulp.task('minify_images', function() {
+
+    return gulp.src('img/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('./img/'))
+        .pipe(notify('Images Compressed'));
+
+});
 
 gulp.task('generate_styles', function(){
 
@@ -70,24 +95,7 @@ gulp.task('compress_javascript', ['clear_scripts'], function() {
 
 });
 
-gulp.task('minify_images', function() {
 
-    return gulp.src('img/*')
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
-        .pipe(gulp.dest('./img/'))
-        .pipe(notify('Images Compressed'));
-
-});
-
-gulp.task('gen_svg_sprite', function() {
-    return gulp.src('img/svg/**/*.svg')
-        .pipe(svgSprite(config))
-        .pipe(gulp.dest('img/svg/'));
-});
 
 gulp.task('watch_build', function() {
     gulp.watch('scss/**/*.scss', ['generate_styles']);

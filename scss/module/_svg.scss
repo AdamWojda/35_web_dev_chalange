@@ -1,15 +1,4 @@
 .svg {
-    &--basket {
-        width: 18px;
-        height: 15px;
-        fill: #fff;
-    }
-
-    &--search {
-        width: 18px;
-        height: 18px;
-        fill: #fff;
-    }
 
     &--alarm,
     &--linegraph,
@@ -19,8 +8,101 @@
     &--image,
     &--pic,
     &--equalizer,
-    &--wir {
+    &--wir,
+    &--speechBuble,
+    &--view,
+    &--speech,
+    &--googleplus,
+    &--youtube,
+    &--tumblr,
+    &--dribbble  {
         fill: #95e1d3;
+    }
+
+    &--facebook,
+    &--twitter,
+    &--instagram,
+    &--pinterest,
+    &--map {
+        fill: #f38181;
+    }
+
+    &--basket,
+    &--search {
+        fill: #fff;
+    }
+
+    &--down {
+        fill: #ccc;
+    }
+
+    &--close {
+        fill: #333;
+    }
+
+    &--linegraph,
+    &--book2,
+    &--image,
+    &--wir {
+        width: 32px;
+        height: 32px;
+    }
+    &--googleplus,
+    &--tumblr,
+    &--youtube,
+    &--dribbble {
+        width: 16px;
+        height: 16px;
+    }
+    &--alarm,
+    &--home {
+        width: 32px;
+        height: 31px;
+    }
+
+    &--close {
+        width: 64px;
+        height: 64px;
+    }
+
+    &--map {
+        width: 20px;
+        height: 26px;
+    }
+
+    &--basket {
+        width: 18px;
+        height: 15px;
+    }
+
+    &--search {
+        width: 18px;
+        height: 18px;
+    }
+
+    &--facebook {
+        width: 13px;
+        height: 26px;
+    }
+
+    &--twitter {
+        width: 26px;
+        height: 22px;
+    }
+
+    &--instagram {
+        width: 26px;
+        height: 26px;
+    }
+
+    &--pinterest {
+        width: 21px;
+        height: 26px;
+    }
+
+    &--speechBuble {
+        width: 63px;
+        height: 61px;
     }
 
     &--pic {
@@ -36,26 +118,21 @@
     &--down {
         width: 22px;
         height: 12px;
-        fill: #ccc;
-    }
-
-    &--linegraph,
-    &--book2,
-    &--image,
-    &--wir {
-        width: 32px;
-        height: 32px;
-    }
-
-    &--alarm,
-    &--home {
-        width: 32px;
-        height: 31px;
     }
 
     &--ok {
         width: 32px;
         height: 28px;
+    }
+
+    &--view {
+        width: 20px;
+        height: 12px;
+    }
+
+    &--speech {
+        width:16px;
+        height:15px;
     }
 
 }

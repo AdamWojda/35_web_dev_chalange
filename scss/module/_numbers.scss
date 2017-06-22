@@ -8,11 +8,11 @@
     &__element {
         flex-basis: 19.95%;
         max-width: 19.95%;
-        border-right: 1px solid rgba(255, 255, 255, .3);
+        border-right: 1px solid rgba(#fff, .3);
         padding: 79px 0 87px;
 
         &:first-child {
-            border-left: 1px solid rgba(255, 255, 255, .3);
+            border-left: 1px solid rgba(#fff, .4);
         }
     }
 

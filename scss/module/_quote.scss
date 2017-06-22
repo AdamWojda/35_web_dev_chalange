@@ -1,0 +1,41 @@
+.quote {
+    padding: 70px 112px 63px;
+
+    &__element {
+            display: flex;
+    }
+    &__icon {
+        text-align: center;
+
+    &__wrapper {
+
+        border: 3px solid #95e1d3;
+        padding: 41px;
+    }
+    }
+
+    &__content {
+        font-style: italic;
+        color: #999;
+        padding-left: 60px;
+        padding-top: 2px;
+        letter-spacing: -.36px;
+        line-height: 1.5;
+    }
+
+    &__separator {
+        display: inline-block;
+    height: 3px;
+    background: red;
+    width: 60px;
+    line-height: 1.6;
+    }
+
+    &__author {
+        display: inline-block;
+margin-left: 3px;
+margin-top: 11px;
+color: #333;
+font-style: normal;
+    }
+}
