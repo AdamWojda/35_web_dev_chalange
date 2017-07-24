@@ -4,3 +4,6 @@ node_modules/
 _test/
 test/
 dist/rev-manifest.json
+xampp/htdocs/35_web_dev_challenge/dist
+35_web_dev_challenge\dist\rev-manifest.json
+35_web_dev_challenge/dist/rev-manifest.json
