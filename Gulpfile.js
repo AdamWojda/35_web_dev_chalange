@@ -1,103 +1,154 @@
-var gulp         = require('gulp'),
-    sass         = require('gulp-sass'),
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    kraken       = require('gulp-kraken'),
-    rename       = require('gulp-rename'),
-    imagemin     = require('gulp-imagemin'),
-    uglify       = require('gulp-uglify'),
-    concat       = require('gulp-concat'),
-    pngquant     = require('imagemin-pngquant'),
-    rimraf       = require('gulp-rimraf'),
-    browserSync  = require('browser-sync'),
-    svgSprite    = require('gulp-svg-sprite'),
-    notify       = require('gulp-notify'),
-    babel        = require('gulp-babel'),
-    eslint       = require('gulp-eslint'),
-    order        = require('gulp-order');
+    kraken = require('gulp-kraken'),
+    rename = require('gulp-rename'),
+    imagemin = require('gulp-imagemin'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
+    pngquant = require('imagemin-pngquant'),
+    rimraf = require('gulp-rimraf'),
+    browserSync = require('browser-sync'),
+    svgSprite = require('gulp-svg-sprite'),
+    notify = require('gulp-notify'),
+    eslint = require('gulp-eslint'),
+    babel = require('gulp-babel'),
+    order = require('gulp-order'),
+    rev = require('gulp-rev'),
+    revReplace = require('gulp-rev-replace');
 
 var config = {
     mode: {
-        symbol: { // symbol mode to build the SVG
+        symbol: { // Symbol mode
             render: {
-                css: false, // CSS output option for icon sizing
-                scss: false // SCSS output option for icon sizing
+                css: false, // CSS for icon sizing
+                scss: false // SCSS for icon sizing
             },
-            dimension: {// Set maximum dimensions
+            dimension: { // Set maximum dimensions
                 width: 42,
                 height: 42
             },
-            dest: './', // destination folder
-            sprite: 'all-sprite.svg', //generated sprite name
-            example: true // Build a sample page, please!
+            dest: './', // Destination folder
+            sprite: 'all-sprite.svg', // Sprite name
+            example: true // Sample page
         }
     }
 };
 
-gulp.task('svg', function() {
+gulp.task('svg', (done) => {
     return gulp.src('img/svg/**/*.svg')
         .pipe(svgSprite(config))
         .pipe(gulp.dest('img/svg/'));
+        done();
 });
 
 
-gulp.task('minify_images', function() {
+gulp.task('minify_images', (done) => {
 
     return gulp.src('img/*')
         .pipe(imagemin({
             progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
             use: [pngquant()]
         }))
         .pipe(gulp.dest('./img/'))
         .pipe(notify('Images Compressed'));
+        done();
 
 });
 
-gulp.task('generate_styles', function(){
 
-    gulp.src('scss/**/*.scss')
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+gulp.task("revreplace", (done) => {
+    var manifest = gulp.src("./" + 'dist/' + "/rev-manifest.json");
+
+    gulp.src('src' + "/index.html")
+        .pipe(revReplace({
+            manifest: manifest
+        }))
+        .pipe(gulp.dest('dist/'))
+        .pipe(notify('revrepl'));
+        done();
+});
+
+
+gulp.task('clear_scripts', (done) => {
+    return gulp.src('dist/js/**/*.*')
+        .pipe(rimraf());
+        done();
+});
+gulp.task('clear_styles', (done) => {
+    return gulp.src('dist/css/**/*.*')
+        .pipe(rimraf());
+        done();
+});
+gulp.task('clear_index', (done) => {
+    return gulp.src('dist/*.html')
+        .pipe(rimraf());
+        done();
+});
+gulp.task('lint', (done) => {
+    return gulp.src(['src/js/scripts.babel.js', '!node_modules/**'])
+        .pipe(eslint({
+            configFile: 'eslintrc.json'
+        }))
+        .pipe(eslint.format());
+        done();
+});
+
+gulp.task('generate_styles', gulp.parallel('clear_styles', 'clear_index', 'lint', (done) => {
+
+    gulp.src('src/scss/**/*.scss')
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }).on('error', sass.logError))
         .pipe(autoprefixer('last 10 versions', 'ie 9'))
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./css/'));
-
-    gulp.src('scss/**/*.scss')
-        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-        .pipe(autoprefixer('last 10 versions', 'ie 9'))
-        .pipe(rename({
-            suffix: '.full'
+        .pipe(rev())
+        .pipe(gulp.dest('./dist/css/'))
+        .pipe(rev.manifest('dist/rev-manifest.json', {
+            base: process.cwd() + '/dist',
+            merge: true
         }))
-        .pipe(gulp.dest('./css/'));
+        .pipe(gulp.dest('./dist'))
+        done();
+}));
+gulp.task('compress_javascript', gulp.parallel('clear_scripts', 'clear_index', 'lint', (done) => {
 
+    gulp.src('src/js/**/*.js')
+        .pipe(order([
+            'src/js/**/*.js',
+            'src/js/scripts.babel.js'
+        ]))
+        .pipe(babel({
+            presets: ['es2015'],
+            ignore: './src/js/lib'
+        }))
+        .pipe(uglify())
+        .pipe(concat('app.js'))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(rev())
+        .pipe(gulp.dest('./dist/js/'))
+        .pipe(rev.manifest('dist/rev-manifest.json', {
+            base: process.cwd() + '/dist',
+            merge: true
+        }))
+        .pipe(gulp.dest('./dist'))
+        .pipe(notify('Javascript Minified and Concatenated'))
+        done();
+}));
+
+gulp.task('generate_js', () => {
+    gulp.watch(['src/js/**/*.js'], gulp.series('compress_javascript', 'revreplace'));
 });
 
-gulp.task('clear_scripts', function() {
-  return gulp.src('js/app.min.js')
-  .pipe(rimraf())
+gulp.task('generate_css', () => {
+    gulp.watch('src/scss/**/*.scss', gulp.series('generate_styles', 'revreplace'));
 });
 
-gulp.task('compress_javascript', ['clear_scripts'], function() {
-
-  gulp.src('js/*.js')
-    .pipe(order([
-          'js/*.js',
-          'js/z_scripts.js'
-      ]))
-    .pipe(uglify())
-    .pipe(concat('app.js'))
-    .pipe(rename({
-        suffix: '.min'
-    }))
-    .pipe(gulp.dest('./js/'))
-    .pipe(notify('Javascript Minified and Concatenated'));
-
-});
-
-
-
-gulp.task('watch_build', function() {
-    gulp.watch('scss/**/*.scss', ['generate_styles']);
-    gulp.watch(['js/**/*.js', '!js/app.min.js'], ['compress_javascript']);
-});
+gulp.task('watch', gulp.parallel('generate_js', 'generate_css'));

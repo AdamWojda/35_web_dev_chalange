@@ -4,7 +4,7 @@
   "description": "My solution to weekly web dev challange.\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D latest (35) weekly web dev challange\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D, weekly web dev challange",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "none"
   },
   "repository": {
     "type": "git",
@@ -23,23 +23,35 @@
   },
   "homepage": "https://github.com/AdamWojda/35_web_dev_chalange#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.18.5",
-    "gulp": "^3.9.1",
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^4.0.0",
     "gulp-imagemin": "^3.1.1",
+    "gulp-jslint": "^1.0.10",
     "gulp-kraken": "^0.2.0",
     "gulp-notify": "^2.2.0",
     "gulp-order": "^1.1.1",
     "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-replace": "^0.4.3",
     "gulp-rimraf": "^0.2.1",
     "gulp-sass": "^2.3.2",
     "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.6.0",
     "gulp-svg-sprite": "^1.3.7",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.8",
-    "imagemin-pngquant": "^5.0.0"
+    "imagemin-pngquant": "^5.0.0",
+    "jest": "^20.0.4",
+    "jshint-stylish": "^2.2.1"
   }
 }

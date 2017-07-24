@@ -3,3 +3,4 @@ vendor/
 node_modules/
 _test/
 test/
+dist/rev-manifest.json

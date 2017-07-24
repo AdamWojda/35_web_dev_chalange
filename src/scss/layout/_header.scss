@@ -1,0 +1,20 @@
+.header {
+    width: 100%;
+    padding: 26px 0;
+    position: fixed;
+    top: 0;
+    transition: all .2s linear;
+    z-index: map-get($depth, header);
+
+    &--active {
+        background: #e68182;
+        padding: 13px 0;
+
+        .logo__link,
+        .navigation__link,
+        .svg {
+            color: #fff;
+            fill: #fff;
+        }
+    }
+}

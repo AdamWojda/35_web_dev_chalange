@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "linebreak-style": 0,
+    "indent": 0,
+    "quote-props": [1, "consistent-as-needed"],
+    "no-unused-vars": [1, {"vars": "local", "args": "none"}],
+    "radix": 0,
+    "space-infix-ops": 0,
+    "default-case": 0,
+    "no-else-return": 0,
+    "no-param-reassign": 0,
+    "quotes": 0
+  },
+  "globals": {
+    "jQuery": true,
+    "$": true
+  }
+}
