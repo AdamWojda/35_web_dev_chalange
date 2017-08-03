@@ -10,10 +10,15 @@
     "default-case": 0,
     "no-else-return": 0,
     "no-param-reassign": 0,
-    "quotes": 0
+    "quotes": 0,
+    "padded-blocks": 0
   },
   "globals": {
     "jQuery": true,
-    "$": true
+    "$": true,
+    "document": true,
+    "window": true,
+    "map": true,
+    "google": true
   }
 }

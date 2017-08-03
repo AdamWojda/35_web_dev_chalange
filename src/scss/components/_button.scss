@@ -9,7 +9,7 @@
 
 .button {
     $root: &;
-    
+
     border: 3px solid #fff;
     padding: 9px 27px 9px 29px;
     letter-spacing: .2px;
@@ -18,5 +18,11 @@
     font-size: 14px;
     text-decoration: none;
     display: inline-block;
+    transition: background .2s linear;
+
+    &:hover {
+        background: #fff;
+        color: #f38181;
+    }
 
 }

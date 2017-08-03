@@ -7,8 +7,8 @@
     z-index: map-get($depth, header);
 
     &--active {
-        background: red;
-        padding: 13px 0;
+        background: #e78282;
+        padding: 13px 0; 
 
         .logo__link,
         .navigation__link,
