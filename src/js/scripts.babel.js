@@ -476,7 +476,7 @@ function initMap() {
                         nav: true,
                         loop: true,
                         dots: false,
-                        navText: ['<svg class="svg svg--arrowcarousel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-svgs.svg#down"></use></svg>','<svg class="svg svg--arrowcarousel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-svgs.svg#down"></use></svg>']
+                        navText: ['<svg class="svg svg--arrowcarousel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#down"></use></svg>','<svg class="svg svg--arrowcarousel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#down"></use></svg>']
                     };
                     break;
 
@@ -486,7 +486,7 @@ function initMap() {
                         nav: true,
                         loop: true,
                         dots: false,
-                        navText: ['<svg class="svg svg--arrowcarousel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-svgs.svg#down"></use></svg>','<svg class="svg svg--arrowcarousel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-svgs.svg#down"></use></svg>']
+                        navText: ['<svg class="svg svg--arrowcarousel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#down"></use></svg>','<svg class="svg svg--arrowcarousel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-sprite.svg#down"></use></svg>']
 
                     };
                     break;
