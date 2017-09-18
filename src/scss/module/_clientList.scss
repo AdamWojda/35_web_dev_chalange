@@ -12,10 +12,20 @@
         padding: 0 40px;
         display: flex;
         margin-bottom: 66px;
+
+        @include breakpoint(701px) {
+            flex-basis: 100%;
+            width: 100%;
+            padding: 0 10px;
+        }
     }
 
     &__image {
         flex-basis: 27%;
+
+        @include breakpoint(1025px) {
+            padding-right: 20px;
+        }
 
         &__element {
             border-radius: 50%;

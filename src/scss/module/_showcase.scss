@@ -3,13 +3,30 @@
     margin-top: 50px;
     margin-left: -55px;
 
+    @include breakpoint(700px) {
+        margin-left: auto;
+    }
+
     &__tablet {
-            display: inline-block;
+        display: inline-block;
+
+        @include breakpoint(700px) {
+            vertical-align: bottom;
+        }
     }
 
     &__mobile {
         position: absolute;
-right: 252px;
-bottom: -88px;
+        right: 252px;
+        bottom: -88px;
+
+        @include breakpoint(1024px) {
+            right: 100px;
+            bottom: -40px;
+        }
+
+        @include breakpoint(700px) {
+            display: none;
+        }
     }
 }

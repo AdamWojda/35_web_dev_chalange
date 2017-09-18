@@ -8,6 +8,11 @@
 .footer {
     display: flex;
 
+    @include breakpoint(1025px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
     &__col {
         // flex-basis: 33.33333%;
         // max-width: 33.33333%;
@@ -16,16 +21,43 @@
             flex-basis: 46%;
             max-width: 46%;
             padding-right: 35px;
+
+            @include breakpoint(1025px) {
+                flex-basis: 100%;
+                max-width: 100%;
+                margin-bottom: 50px;
+                padding-right: 0;
+            }
         }
 
         &--2 {
             flex-basis: 37%;
             max-width: 37%;
+
+            @include breakpoint(1025px) {
+                flex-basis: 50%;
+                max-width: 50%;
+            }
+
+            @include breakpoint(700px) {
+                display: none;
+            }
+
         }
 
         &--3 {
             flex-basis: 25%;
             max-width: 25%;
+
+            @include breakpoint(1025px) {
+                flex-basis: 50%;
+                max-width: 50%;
+            }
+
+            @include breakpoint(700px) {
+                display: none;
+            }
+
         }
     }
 

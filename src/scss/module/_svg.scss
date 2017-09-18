@@ -47,6 +47,7 @@
         width: 32px;
         height: 32px;
     }
+
     &--googleplus,
     &--tumblr,
     &--youtube,
@@ -54,6 +55,7 @@
         width: 16px;
         height: 16px;
     }
+
     &--alarm,
     &--home {
         width: 32px;
@@ -63,6 +65,12 @@
     &--close {
         width: 64px;
         height: 64px;
+    }
+
+    &--arrowcarousel {
+        width: 25px;
+        height: 25px;
+        fill: #cacaca;
     }
 
     &--map {

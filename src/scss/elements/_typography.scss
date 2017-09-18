@@ -25,11 +25,13 @@
     }
 
     &--enormous {
-        font-size: 150px;
+        @include fluid-type(50px, 150px, 450px, 1220px);
+        // font-size: 150px;
     }
 
     &--big {
         font-size: 72px;
+        @include fluid-type(29px, 72px, 450px, 1220px);
     }
 
     &--medium {
@@ -38,6 +40,7 @@
 
     &--smaller {
         font-size: 24px;
+
     }
 
     &--small {

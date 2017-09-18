@@ -42,10 +42,20 @@
     &--instagram {
         display: flex;
         flex-wrap: wrap;
+
+        @include breakpoint(1025px) {
+            display: block;
+            width: 100%;
+        }
     }
 
     &--instagram &__element {
         margin: 0 0 2px 2px;
+        width: 32%;
+        @include breakpoint(1025px) {
+            width: auto;
+            display: inline-block;
+        }
     }
 
 

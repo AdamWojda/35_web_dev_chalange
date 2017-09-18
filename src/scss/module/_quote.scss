@@ -1,17 +1,33 @@
 .quote {
     padding: 70px 112px 63px;
 
+    @include breakpoint(1024px) {
+        padding: 40px 50px 33px 50px;
+    }
+ 
     &__element {
             display: flex;
+
+            @include breakpoint(600px) {
+                flex-direction: column;
+            }
     }
     &__icon {
         text-align: center;
 
-    &__wrapper {
+        &__wrapper {
+            border: 3px solid #95e1d3;
+            padding: 41px;
 
-        border: 3px solid #95e1d3;
-        padding: 41px;
-    }
+            @include breakpoint(1024px) {
+                padding: 31px;
+            }
+            @include breakpoint(600px) {
+                max-width: 150px;
+                margin: 0 auto 50px;
+                width: 150px;
+            }
+        }
     }
 
     &__content {
@@ -21,6 +37,16 @@
         padding-top: 2px;
         letter-spacing: -.36px;
         line-height: 1.5;
+
+        @include breakpoint(1024px) {
+            padding-left: 20px;
+
+            .typo--smaller {
+                font-size: 19px;
+            }
+
+        }
+
     }
 
     &__separator {
@@ -39,5 +65,61 @@
         margin-top: 11px;
         color: #333;
         font-style: normal;
+    }
+
+    .owl {
+
+        &-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            z-index: 1000;
+
+            @include breakpoint(1024px) {
+                left: 0;
+            }
+        }
+
+        &-prev,
+        &-next {
+            cursor: pointer;
+        }
+
+        &-prev {
+            display: inline-block;
+            width: 20px;
+            margin-left: -110px;
+
+            @include breakpoint(1024px) {
+                margin-left: 0;
+            }
+
+            .svg {
+                transform: rotate(-90deg);
+            }
+
+            &.disabled {
+                display: none;
+            }
+        }
+
+        &-next {
+            float: right;
+            transform: rotate(-180deg);
+            margin-right: 110px;
+
+            @include breakpoint(1024px) {
+                margin-right: 0;
+            }
+
+            .svg {
+                transform: rotate(-90deg);
+            }
+
+            &.disabled {
+                display: none;
+            }
+        }
     }
 }

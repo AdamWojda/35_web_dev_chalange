@@ -11,13 +11,37 @@
         border-right: 1px solid rgba(#fff, .3);
         padding: 79px 0 87px;
 
+        @include breakpoint(750px) {
+            flex-basis: 100%;
+            max-width: 100%;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(#fff, .3);
+            border-right: 0;
+            display: flex;
+        }
+
         &:first-child {
             border-left: 1px solid rgba(#fff, .4);
+
+            @include breakpoint(750px) {
+                border-left: 0;
+            }
+        }
+    }
+
+    &__value {
+        @include breakpoint(750px) {
+            flex: 1 0 70px;
+            order: 2;
         }
     }
 
     &__title {
         font-size: 14px;
         margin-top: 18px;
+            @include breakpoint(750px) {
+                text-align: left;
+                flex: 1 0 calc(100% - 70px);
+            }
     }
 }

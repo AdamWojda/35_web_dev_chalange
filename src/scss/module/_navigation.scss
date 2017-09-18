@@ -7,24 +7,37 @@
         flex: 7.2 0 auto;
         display: flex;
         padding-top: 9px;
-    }
 
-    &__tools {
-        display: flex;
-        flex: 1 0 auto;
-        padding-top: 6px;
-    }
+        @include breakpoint(500px){
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
 
-    &__tools &__element {
-        flex: 1 0 auto;
+            position: absolute;
+            background: #e78282;
+            top: 39px;
+            width: 100%;
+            left: 0px;
+            padding-top: 0;
+            opacity: 0;
+            left: -100%;
 
-        &:last-child {
-            flex: 0 0 auto;
+            transition: all .2s linear;
+        }
+
+        .header--open & {
+            opacity: 1;
+            left: 0;
         }
     }
 
     &__element {
         flex: 1 0 auto;
+
+        @include breakpoint(500px) {
+            width: 100%;
+        }
+
     }
 
     &__link {
@@ -33,6 +46,107 @@
         text-decoration: none;
         text-transform: uppercase;
         color: #fff;
+
+        @include breakpoint(500px) {
+            display: inline-block;
+            padding: 12px 0;
+            width: 100%;
+            font-size: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+            transition: all .2s linear;
+        }
+
+        &:hover {
+
+            @include breakpoint(500px) {
+                background: #d66f6f;
+            }
+        }
+    }
+
+    &__tools {
+        display: flex;
+        flex: 1 0 auto;
+        padding-top: 6px;
+
+        @include breakpoint(500px) {
+            position: absolute;
+            background: #e78282;
+            top: 288px;
+            width: 100%;
+            left: 0px;
+            align-items: stretch;
+            text-align: center;
+            padding: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+            opacity: 0;
+            left: -100%;
+
+            transition: all .2s linear;
+        }
+
+        .header--open & {
+            opacity: 1;
+            left: 0;
+        }
+
+    }
+
+    &__tools &__element {
+        flex: 1 0 auto;
+
+        @include breakpoint(500px) {
+            flex: 1 0 50%;
+            transition: all .2s linear;
+        }
+
+        &:hover {
+
+            @include breakpoint(500px) {
+                background: #d66f6f;
+            }
+        }
+
+        @include breakpoint(500px) {
+
+            &:nth-child(2n+2) {
+                border-left: 1px solid rgba(255, 255, 255, 0.18);
+            }
+
+        }
+
+        &:last-child {
+            flex: 0 0 auto;
+
+            @include breakpoint(500px) {
+                flex: 1 0 50%;
+            }
+        }
+
+        @include breakpoint(500px) {
+
+            .svg {
+                &--basket {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                &--search {
+                    width: 25px;
+                    height: 30px;
+                }
+            }
+        }
+
+    }
+
+    &__tools &__link {
+
+        @include breakpoint(500px) {
+            border-bottom: 0;
+            padding: 10px 0 5px;
+        }
+
     }
 
     .logo {

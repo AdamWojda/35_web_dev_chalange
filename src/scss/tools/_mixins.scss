@@ -1,20 +1,76 @@
-// RWD mixin
-$xs: ( max:  767px );
-$sm: ( max:  500px );
-$md: ( max:  650px );
-$lgx: ( max: 1200px );
-$small: ( max:  400px );
-$medium: ( max: 1000px );
-$mega: ( max: 1470px );
+//- Mixin: Fluid Type
+///
+/// Magic calc + vh to allow text to be fluid between minimum
+/// and maximum breakpoints.
+///
+/// @group typography
+/// @param {variable} $min-font-size [12px] - Minimum font size
+/// @param {variable} $max-font-size [24px] - Maximum font size
+/// @param {variable} $lower-range [420px] - Stop scaling font smaller at this screen resolution
+/// @param {variable} $upper-range [900px] - Stop scaling font larger at this screen resolution
+/// @example
+///   h1 {
+///     @include responsive-type(20px, 48px);
+///   }
+/// @site https://madebymike.com.au/writing/precise-control-responsive-typography/
 
-@mixin breakpoint($map) {
-  $query: "";
-  @if map-has-key($map, min) { $query: append($query, "(min-width: #{map-get($map, min)})") }
-  @if map-has-key($map, min) and map-has-key($map, max) { $query: append($query, "and") }
-  @if map-has-key($map, max) { $query: append($query, "(max-width: #{map-get($map, max)})") }
-  @media screen and #{$query} { @content; }
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 900px) {
+
+  font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+
+  @media screen and (max-width: $lower-range) {
+    font-size: $min-font-size;
+  }
+  @media screen and (min-width: $upper-range){
+    font-size: $max-font-size;
+  }
 }
 
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (min-width: 768px) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: 992px) { @content; }
+  }
+
+  @else if $min == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+@mixin breakpoint($max: 0, $min: 0 ) {
+  $type: type-of($min);
+
+  @if $type == string {
+    @include breakpoint($class);
+  }
+
+  @else if $type == number {
+    $query: "all" !default;
+    @if $min != 0 and $max != 0 {
+      $query: "(min-width: #{$min}) and (max-width: #{$max})";
+    }
+    @else if $min != 0 and $max == 0 {
+      $query: "(min-width: #{$min})";
+    }
+    @else if $min == 0 and $max != 0 {
+      $query: "(max-width: #{$max})";
+    }
+    @media #{$query} {
+      @content;
+    }
+  }
+}
 //
 // Mixin to clear floated elements
 //

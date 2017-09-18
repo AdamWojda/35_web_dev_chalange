@@ -193,6 +193,7 @@ function initMap() {
 
 (function () {
 
+
     // ---- Module - Trigger ---- //
     const trigger = {
 
@@ -473,7 +474,9 @@ function initMap() {
                     carouselSettings = {
                         items: 1,
                         nav: true,
+                        loop: true,
                         dots: false,
+                        navText: ['<svg class="svg svg--arrowcarousel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-svgs.svg#down"></use></svg>','<svg class="svg svg--arrowcarousel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-svgs.svg#down"></use></svg>']
                     };
                     break;
 
@@ -481,7 +484,10 @@ function initMap() {
                     carouselSettings = {
                         items: 1,
                         nav: true,
+                        loop: true,
                         dots: false,
+                        navText: ['<svg class="svg svg--arrowcarousel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-svgs.svg#down"></use></svg>','<svg class="svg svg--arrowcarousel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/all-svgs.svg#down"></use></svg>']
+
                     };
                     break;
 
@@ -517,6 +523,37 @@ function initMap() {
     // ---- Modules - INIT ---- //
     carousels.init();
     scrollToAnchor.init();
+
+    // find element
+    $owl = $('body').find('[data-slider="testimonals"]');
+
+    // set the owl-carousel otions
+    var carousel_Settings = {
+      touchDrag: false,
+      mouseDrag: false
+    };
+
+    function initialize(){
+      var containerWidth = window.innerWidth;
+      if(containerWidth <= 700) {
+        // initialize owl-carousel if window screensize is less the 767px
+        $owl.owlCarousel( carousel_Settings );
+      } else {
+        // destroy owl-carousel and remove all depending classes if window screensize is bigger then 767px
+        $owl.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+        $owl.find('.owl-stage-outer').children().unwrap();
+      }
+    }
+
+    // initilize after window resize
+    var id;
+    $(window).resize( function() {
+      clearTimeout(id);
+      id = setTimeout(initialize, 500);
+    });
+
+    // initilize onload
+    initialize();
 
     function tabs(e) {
 
@@ -656,6 +693,25 @@ function initMap() {
         }
 
     }, 50);
+
+    const openCloseMenu = function() {
+        const $mainHeader = $('#main-header');
+        const $this = $(this);
+
+        if(!$mainHeader.hasClass('header--open')) {
+            $mainHeader.addClass('header--open');
+            $this.addClass('is-active');
+        } else {
+            $mainHeader.removeClass('header--open');
+            $this.removeClass('is-active');
+        }
+
+        if(!$mainHeader.hasClass('header--active') ){
+            $mainHeader.addClass('header--active');
+        }
+    };
+
+    $('#hamburger-menu').click(openCloseMenu)
 
 
 }());

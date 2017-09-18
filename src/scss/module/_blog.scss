@@ -10,6 +10,11 @@
     display: flex;
     margin-top: 52px;
 
+    @include breakpoint(1025px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
 
     &__article {
         flex-basis: 31.63333%;
@@ -17,8 +22,29 @@
         flex-wrap: wrap;
         margin-right: 2.45%;
 
+        @include breakpoint(1025px) {
+            flex-basis: 48.77%;
+
+            &:nth-child(2) {
+                margin-right: 0;
+            }
+        }
+
+        @include breakpoint(700px) {
+            flex-basis: 100%;
+            margin-right: 0;
+            margin-top: 2.45%;
+        }
+
         &:last-child {
             margin-right: 0;
+
+            @include breakpoint(1025px) {
+                max-width: 100%;
+                flex-basis: 100%;
+                margin-top: 2.45%;
+            }
+
         }
     }
 
@@ -28,6 +54,11 @@
 
         &__image {
             width: 100%;
+
+            @include breakpoint(1025px) {
+                max-height: 250px;
+                object-fit: cover;
+            }
         }
 
         &__content {
@@ -103,6 +134,12 @@
             color: #999;
         }
 
+    }
+
+    &__link {
+        @include breakpoint(1025px) {
+            width: 100%;
+        }
     }
 
 }

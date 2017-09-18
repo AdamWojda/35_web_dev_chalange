@@ -4,9 +4,33 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        @include breakpoint(700px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+        }
     }
+
 
     &__element {
 
+        @include breakpoint(1025px) {
+            padding: 0 15px;
+        }
+        @include breakpoint(700px) {
+            flex: 1 0 50%;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &__link {
+
+        img {
+            @include breakpoint(700px) {
+                display: inline-block;
+            }
+        }
     }
 }

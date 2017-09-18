@@ -6,6 +6,12 @@
         margin-top: 44px;
         line-height: 1.6;
         letter-spacing: .05px;
+
+        br {
+            @include breakpoint(800px) {
+                display: none;
+            }
+        }
     }
 
     &__heading {
@@ -38,6 +44,12 @@
 
     &--dark {
         background: #f8f8f8;
+    }
+
+    &--aboutUs {
+        .ImageGrid__element:last-child .ImageGrid__image {
+            max-height: 300px;
+        }
     }
 
 }

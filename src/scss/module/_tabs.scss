@@ -3,6 +3,10 @@
 
     display: flex;
 
+    @include breakpoint(1024px) {
+        flex-direction: column;
+    }
+
     &__text {
         overflow: hidden;
         flex-grow: 0;
@@ -17,11 +21,25 @@
     &__image {
         opacity: 0;
         transition: opacity 1s linear;
+        max-height: 380px;
+
+        @include breakpoint(1025px) {
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
     }
 
     &__images {
         flex-basis: 50%;
         max-width: 50%;
+
+        @include breakpoint(1024px) {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+
 
         &__element {
             transform: scale(0);
@@ -52,6 +70,13 @@
         flex-direction: column;
         flex-basis: 50%;
         max-width: 50%;
+
+        @include breakpoint(1024px) {
+            flex-basis: 100%;
+            max-width: 100%;
+            margin-top: 30px;
+        }
+
 
         &__element {
             border: 1px solid #e5e5e5;
@@ -88,6 +113,10 @@
             max-width: 7.7%;
             line-height: 53px;
 
+
+            @include breakpoint(500px) {
+                display: none;
+            }
             .svg {
                 display: inline-block;
                 vertical-align: middle;
@@ -140,7 +169,7 @@
 }
 .tabs__list {
     height: 388px;
-    margin: 0 auto;
+
     background: #fff;
 }
 .tabs__list__element {
