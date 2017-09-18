@@ -7,7 +7,7 @@
     } else if (typeof exports === 'object') {
         // CommonJS
         factory(require('jquery'));
-    } else {
+    } else { 
         // Browser globals
         factory(jQuery);
     }
